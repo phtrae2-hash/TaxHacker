@@ -4,11 +4,7 @@ import React from "react"
 import { Resend } from "resend"
 import config from "./config"
 
-// Resend exige chave no formato re_xxx; usa placeholder para dev sem envio de e-mail
-const apiKey = config.email.apiKey && !config.email.apiKey.includes("please-set")
-  ? config.email.apiKey
-  : "re_dummy_for_local_dev_only"
-export const resend = new Resend(apiKey)
+export const resend = new Resend(config.email.apiKey)
 
 export async function sendOTPCodeEmail({ email, otp }: { email: string; otp: string }) {
   const html = React.createElement(OTPEmail, { otp })
