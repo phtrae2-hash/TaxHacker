@@ -2,7 +2,11 @@ version: '3.7'
 
 services:
   taxhacker:
-    image: ghcr.io/vas3k/taxhacker:latest
+    # Build do SEU fork com traduções pt-BR (não use a imagem vas3k/original)
+    build:
+      context: https://github.com/phtrae2-hash/TaxHacker.git
+      dockerfile: Dockerfile
+    image: taxhacker-ptbr:latest
     networks:
       - portainerRede
 
