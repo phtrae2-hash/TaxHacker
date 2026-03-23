@@ -134,7 +134,7 @@ export function InvoiceGenerator({
       URL.revokeObjectURL(url)
     } catch (error) {
       console.error("Error generating PDF:", error)
-      alert("Failed to generate PDF. Please try again.")
+      alert("Falha ao gerar o PDF. Tente novamente.")
     } finally {
       setIsPdfLoading(false)
     }
@@ -142,12 +142,12 @@ export function InvoiceGenerator({
 
   const handleSaveTemplate = async () => {
     if (!newTemplateName.trim()) {
-      alert("Please enter a template name")
+      alert("Por favor, informe um nome para o modelo")
       return
     }
 
     if (templates.some((t) => t.name === newTemplateName)) {
-      alert("A template with this name already exists")
+      alert("Já existe um modelo com este nome")
       return
     }
 
@@ -163,11 +163,11 @@ export function InvoiceGenerator({
         setNewTemplateName("")
         router.refresh()
       } else {
-        alert("Failed to save template. Please try again.")
+        alert("Falha ao salvar o modelo. Tente novamente.")
       }
     } catch (error) {
       console.error("Error saving template:", error)
-      alert("Failed to save template. Please try again.")
+      alert("Falha ao salvar o modelo. Tente novamente.")
     }
   }
 
@@ -182,7 +182,7 @@ export function InvoiceGenerator({
       }
     } catch (error) {
       console.error("Error deleting template:", error)
-      alert("Failed to delete template. Please try again.")
+      alert("Falha ao excluir o modelo. Tente novamente.")
     }
   }
 
@@ -203,11 +203,11 @@ export function InvoiceGenerator({
           router.push(`/transactions/${result.data?.id}`)
         })
       } else {
-        alert(result.error || "Failed to save as transaction")
+        alert(result.error || "Falha ao salvar como transação")
       }
     } catch (error) {
       console.error("Error saving as transaction:", error)
-      alert("Failed to save as transaction. Please try again.")
+      alert("Falha ao salvar como transação. Tente novamente.")
     } finally {
       setIsSavingTransaction(false)
     }
@@ -252,29 +252,29 @@ export function InvoiceGenerator({
             {isPdfLoading ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Generating...
+                Gerando...
               </>
             ) : (
               <>
                 <FileDown className="mr-2" />
-                Download PDF
+                Baixar PDF
               </>
             )}
           </Button>
           <Button variant="secondary" onClick={() => setIsTemplateDialogOpen(true)}>
             <TextSelect />
-            Make a Template
+            Criar um modelo
           </Button>
           <Button variant="secondary" onClick={handleSaveAsTransaction} disabled={isSavingTransaction}>
             {isSavingTransaction ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Saving...
+                Salvando...
               </>
             ) : (
               <>
                 <Save className="mr-2" />
-                Save as Transaction
+                Salvar como transação
               </>
             )}
           </Button>
@@ -285,22 +285,22 @@ export function InvoiceGenerator({
       <Dialog open={isTemplateDialogOpen} onOpenChange={setIsTemplateDialogOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Save as Template</DialogTitle>
+            <DialogTitle>Salvar como modelo</DialogTitle>
           </DialogHeader>
           <div className="py-4">
             <input
               type="text"
               value={newTemplateName}
               onChange={(e) => setNewTemplateName(e.target.value)}
-              placeholder="Enter template name"
+              placeholder="Informe o nome do modelo"
               className="w-full px-3 py-2 border rounded-md"
             />
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setIsTemplateDialogOpen(false)}>
-              Cancel
+              Cancelar
             </Button>
-            <Button onClick={handleSaveTemplate}>Save Template</Button>
+            <Button onClick={handleSaveTemplate}>Salvar modelo</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

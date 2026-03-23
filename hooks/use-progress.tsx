@@ -63,7 +63,7 @@ export function useProgress(options: UseProgressOptions = {}) {
       source.onerror = (error) => {
         source.close()
         setIsLoading(false)
-        const err = new Error("Progress tracking failed")
+        const err = new Error("Falha no acompanhamento do progresso")
         console.error("Progress tracking error:", err)
         options.onError?.(err)
       }
@@ -71,7 +71,7 @@ export function useProgress(options: UseProgressOptions = {}) {
       return progressId
     } catch (error) {
       setIsLoading(false)
-      const err = error instanceof Error ? error : new Error("Failed to start progress")
+      const err = error instanceof Error ? error : new Error("Falha ao iniciar o acompanhamento do progresso")
       console.error("Failed to start progress:", err)
       options.onError?.(err)
       return null

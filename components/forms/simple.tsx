@@ -167,7 +167,7 @@ export const FormSelect = ({
 export const FormDate = ({
   name,
   title,
-  placeholder = "Select date",
+  placeholder = "Selecione a data",
   defaultValue,
   ...props
 }: {
@@ -265,10 +265,10 @@ export const FormAvatar = ({
       <div className={cn("relative group", className)}>
         <div className="absolute inset-0 flex items-center justify-center bg-background rounded-lg overflow-hidden">
           {preview ? (
-            <img src={preview} alt="Avatar preview" className="w-full h-full object-cover" />
+            <img src={preview} alt="Pré-visualização do avatar" className="w-full h-full object-cover" />
           ) : (
             <div className="w-full h-full bg-muted flex items-center justify-center">
-              <span className="text-muted-foreground">No image</span>
+              <span className="text-muted-foreground">Sem imagem</span>
             </div>
           )}
         </div>

@@ -6,7 +6,7 @@ export default function Loading() {
     <>
       <header className="flex items-center justify-between">
         <h2 className="text-3xl font-bold tracking-tight flex flex-row gap-2">
-          <span>Loading unsorted files...</span>
+          <span>Carregando arquivos não classificados...</span>
           <Loader2 className="h-10 w-10 animate-spin" />
         </h2>
       </header>

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(config.app.baseURL),
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "pt_BR",
     url: config.app.baseURL,
     title: config.app.title,
     description: config.app.description,
@@ -44,7 +44,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className="min-h-screen bg-white antialiased">{children}</body>
     </html>
   )

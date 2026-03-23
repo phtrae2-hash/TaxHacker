@@ -38,7 +38,7 @@ export function IncomeExpenceGraphTooltip({ data, defaultCurrency, position, vis
       <div className="mb-3 pb-2 border-b border-gray-100">
         <h3 className="font-bold text-gray-900 text-sm">{formatPeriodLabel(data.period, data.date)}</h3>
         <p className="text-xs text-gray-500">
-          {data.totalTransactions} transaction{data.totalTransactions !== 1 ? "s" : ""}
+          {data.totalTransactions} transação{data.totalTransactions !== 1 ? "s" : ""}
         </p>
       </div>
 
@@ -46,13 +46,13 @@ export function IncomeExpenceGraphTooltip({ data, defaultCurrency, position, vis
       <div className="mb-3 space-y-1">
         {data.income > 0 && (
           <div className="flex justify-between items-center">
-            <span className="text-sm font-medium text-green-600">Total Income:</span>
+            <span className="text-sm font-medium text-green-600">Receita total:</span>
             <span className="text-sm font-bold text-green-600">{formatCurrency(data.income, defaultCurrency)}</span>
           </div>
         )}
         {data.expenses > 0 && (
           <div className="flex justify-between items-center">
-            <span className="text-sm font-medium text-red-600">Total Expenses:</span>
+            <span className="text-sm font-medium text-red-600">Despesa total:</span>
             <span className="text-sm font-bold text-red-600">{formatCurrency(data.expenses, defaultCurrency)}</span>
           </div>
         )}
@@ -61,7 +61,9 @@ export function IncomeExpenceGraphTooltip({ data, defaultCurrency, position, vis
       {/* Income Categories */}
       {incomeCategories.length > 0 && (
         <div className="mb-3">
-          <h4 className="text-xs font-semibold text-green-600 mb-2 uppercase tracking-wide">Income by Category</h4>
+          <h4 className="text-xs font-semibold text-green-600 mb-2 uppercase tracking-wide">
+            Receita por categoria
+          </h4>
           <div className="space-y-1">
             {incomeCategories.map((category) => (
               <div key={`income-${category.code}`} className="flex items-center justify-between">
@@ -81,7 +83,9 @@ export function IncomeExpenceGraphTooltip({ data, defaultCurrency, position, vis
       {/* Expense Categories */}
       {expenseCategories.length > 0 && (
         <div>
-          <h4 className="text-xs font-semibold text-red-600 mb-2 uppercase tracking-wide">Expenses by Category</h4>
+          <h4 className="text-xs font-semibold text-red-600 mb-2 uppercase tracking-wide">
+            Despesas por categoria
+          </h4>
           <div className="space-y-1">
             {expenseCategories.map((category) => (
               <div key={`expense-${category.code}`} className="flex items-center justify-between">

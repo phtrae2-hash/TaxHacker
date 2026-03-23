@@ -34,20 +34,20 @@ export async function analyzeFileAction(
   const user = await getCurrentUser()
 
   if (!file || file.userId !== user.id) {
-    return { success: false, error: "File not found or does not belong to the user" }
+    return { success: false, error: "Arquivo não encontrado ou não pertence ao usuário" }
   }
 
   if (isAiBalanceExhausted(user)) {
     return {
       success: false,
-      error: "You used all of your pre-paid AI scans, please upgrade your account or buy new subscription plan",
+      error: "Você utilizou todas as suas verificações de IA pré-pagas. Atualize sua conta ou adquira um novo plano.",
     }
   }
 
   if (isSubscriptionExpired(user)) {
     return {
       success: false,
-      error: "Your subscription has expired, please upgrade your account or buy new subscription plan",
+      error: "Sua assinatura expirou. Atualize sua conta ou adquira um novo plano.",
     }
   }
 
@@ -56,7 +56,7 @@ export async function analyzeFileAction(
     attachments = await loadAttachmentsForAI(user, file)
   } catch (error) {
     console.error("Failed to retrieve files:", error)
-    return { success: false, error: "Failed to retrieve files: " + error }
+    return { success: false, error: "Falha ao recuperar os arquivos: " + error }
   }
 
   const prompt = buildLLMPrompt(
@@ -94,7 +94,7 @@ export async function saveFileAsTransactionAction(
     // Get the file record
     const fileId = formData.get("fileId") as string
     const file = await getFileById(fileId, user.id)
-    if (!file) throw new Error("File not found")
+    if (!file) throw new Error("Arquivo não encontrado")
 
     // Create transaction
     const transaction = await createTransaction(user.id, validatedForm.data)
@@ -124,7 +124,7 @@ export async function saveFileAsTransactionAction(
     return { success: true, data: transaction }
   } catch (error) {
     console.error("Failed to save transaction:", error)
-    return { success: false, error: `Failed to save transaction: ${error}` }
+    return { success: false, error: `Falha ao salvar a transação: ${error}` }
   }
 }
 
@@ -139,7 +139,7 @@ export async function deleteUnsortedFileAction(
     return { success: true }
   } catch (error) {
     console.error("Failed to delete file:", error)
-    return { success: false, error: "Failed to delete file" }
+    return { success: false, error: "Falha ao excluir o arquivo" }
   }
 }
 
@@ -153,13 +153,13 @@ export async function splitFileIntoItemsAction(
     const items = JSON.parse(formData.get("items") as string) as TransactionData[]
 
     if (!fileId || !items || items.length === 0) {
-      return { success: false, error: "File ID and items are required" }
+      return { success: false, error: "O ID do arquivo e os itens são obrigatórios" }
     }
 
     // Get the original file
     const originalFile = await getFileById(fileId, user.id)
     if (!originalFile) {
-      return { success: false, error: "Original file not found" }
+      return { success: false, error: "Arquivo original não encontrado" }
     }
 
     // Get the original file's content
@@ -215,6 +215,6 @@ export async function splitFileIntoItemsAction(
     return { success: true }
   } catch (error) {
     console.error("Failed to split file into items:", error)
-    return { success: false, error: `Failed to split file into items: ${error}` }
+    return { success: false, error: `Falha ao dividir o arquivo em itens: ${error}` }
   }
 }

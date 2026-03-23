@@ -14,11 +14,11 @@ export async function parseCSVAction(
 ): Promise<ActionState<string[][]>> {
   const file = formData.get("file") as File
   if (!file) {
-    return { success: false, error: "No file uploaded" }
+    return { success: false, error: "Nenhum arquivo enviado" }
   }
 
   if (!file.name.toLowerCase().endsWith(".csv")) {
-    return { success: false, error: "Only CSV files are allowed" }
+    return { success: false, error: "Somente arquivos CSV são permitidos" }
   }
 
   try {
@@ -39,7 +39,7 @@ export async function parseCSVAction(
     return { success: true, data: rows }
   } catch (error) {
     console.error("Error parsing CSV:", error)
-    return { success: false, error: "Failed to parse CSV file" }
+    return { success: false, error: "Falha ao analisar o arquivo CSV" }
   }
 }
 
@@ -71,6 +71,6 @@ export async function saveTransactionsAction(
     return { success: true }
   } catch (error) {
     console.error("Error saving transactions:", error)
-    return { success: false, error: "Failed to save transactions: " + error }
+    return { success: false, error: "Falha ao salvar as transações: " + error }
   }
 }

@@ -26,11 +26,14 @@ export async function restoreBackupAction(
   const file = formData.get("file") as File
 
   if (!file || file.size === 0) {
-    return { success: false, error: "No file provided" }
+    return { success: false, error: "Nenhum arquivo fornecido" }
   }
 
   if (file.size > MAX_BACKUP_SIZE) {
-    return { success: false, error: `Backup file too large. Maximum size is ${MAX_BACKUP_SIZE / 1024 / 1024}MB` }
+    return {
+      success: false,
+      error: `O arquivo de backup é muito grande. O tamanho máximo é ${MAX_BACKUP_SIZE / 1024 / 1024}MB`,
+    }
   }
 
   // Read zip archive
@@ -40,7 +43,7 @@ export async function restoreBackupAction(
     const fileData = Buffer.from(fileBuffer)
     zip = await JSZip.loadAsync(fileData)
   } catch (error) {
-    return { success: false, error: "Bad zip archive: " + (error as Error).message }
+    return { success: false, error: "Arquivo ZIP inválido: " + (error as Error).message }
   }
 
   // Check metadata and start restoring
@@ -54,8 +57,8 @@ export async function restoreBackupAction(
           return {
             success: false,
             error: `Incompatible backup version: ${
-              metadata.version || "unknown"
-            }. Supported versions: ${SUPPORTED_BACKUP_VERSIONS.join(", ")}`,
+              metadata.version || "desconhecida"
+            }. Versões compatíveis: ${SUPPORTED_BACKUP_VERSIONS.join(", ")}`,
           }
         }
         console.log(`Restoring backup version ${metadata.version} created at ${metadata.timestamp}`)
@@ -132,12 +135,14 @@ export async function restoreBackupAction(
           },
         })
       }
-      counters["Uploaded attachments"] = restoredFilesCount
+      counters["Anexos enviados"] = restoredFilesCount
     } catch (error) {
       console.error("Error restoring uploaded files:", error)
       return {
         success: false,
-        error: `Error restoring uploaded files: ${error instanceof Error ? error.message : String(error)}`,
+        error: `Falha ao restaurar os arquivos enviados: ${
+          error instanceof Error ? error.message : String(error)
+        }`,
       }
     }
 
@@ -146,7 +151,7 @@ export async function restoreBackupAction(
     console.error("Error restoring from backup:", error)
     return {
       success: false,
-      error: `Error restoring from backup: ${error instanceof Error ? error.message : String(error)}`,
+      error: `Falha ao restaurar a partir do backup: ${error instanceof Error ? error.message : String(error)}`,
     }
   }
 }

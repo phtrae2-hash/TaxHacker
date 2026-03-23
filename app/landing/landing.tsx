@@ -25,7 +25,7 @@ export default function LandingPage() {
             href="/enter"
             className="cursor-pointer font-medium px-4 py-2 rounded-full border-2 border-gradient-to-r from-pink-300 to-indigo-300 hover:from-pink-400 hover:to-indigo-400 bg-white/80 hover:bg-white transition-all duration-300 hover:scale-105 text-xs md:text-sm"
           >
-            Log In
+            Entrar
           </Link>
         </div>
       </header>
@@ -40,26 +40,27 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <div className="inline-block px-6 py-3 rounded-full border-2 border-pink-600/50 text-sm font-medium mb-6 shadow-lg hover:shadow-xl transition-all duration-300">
-              🚀 Under Active Development
+              🚀 Em desenvolvimento ativo
             </div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl mb-6 bg-gradient-to-r from-gray-900 via-pink-700 to-indigo-700 bg-clip-text text-transparent pb-2">
-              Let AI finally care about your taxes, scan your receipts and analyze your expenses
+              Deixe que a IA cuide dos seus impostos: digitalize seus comprovantes e analise suas despesas
             </h1>
             <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto font-medium">
-              Self-hosted accounting app crafted for freelancers, indie-hackers and small businesses
+              Aplicativo de contabilidade auto-hospedado, ideal para profissionais autônomos, equipes independentes e
+              pequenas empresas
             </p>
             <div className="flex gap-4 justify-center text-sm md:text-lg">
               <Link
                 href="#start"
                 className="px-8 py-4 bg-gradient-to-r from-pink-600 to-indigo-600 text-white font-bold rounded-full hover:from-pink-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-110 border-2 border-white/20"
               >
-                Get Started ✨
+                Começar ✨
               </Link>
               <Link
                 href="mailto:me@vas3k.com"
                 className="px-8 py-4 border-2 border-gradient-to-r from-pink-300 to-indigo-300 text-gray-800 font-bold rounded-full hover:bg-gradient-to-r hover:from-pink-50 hover:to-indigo-50 transition-all duration-300 hover:scale-105 bg-white/80"
               >
-                Contact Us 💌
+                Fale Conosco 💌
               </Link>
             </div>
           </div>
@@ -80,10 +81,10 @@ export default function LandingPage() {
           <div className="text-center mb-16">
             <h2 className="flex flex-col gap-3 mb-4">
               <span className="text-6xl font-bold bg-gradient-to-r from-pink-600 to-indigo-600 bg-clip-text text-transparent">
-                F∗ck Taxes
+                Simplifique seus impostos
               </span>
               <span className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-                TaxHacker saves you time, money and nerves
+                A TaxHacker economiza seu tempo, dinheiro e suas preocupações
               </span>
             </h2>
           </div>
@@ -92,36 +93,36 @@ export default function LandingPage() {
           <div className="flex flex-wrap items-center gap-12 mb-20 bg-gradient-to-br from-white via-pink-50/30 to-indigo-50/30 p-8 rounded-3xl shadow-xl ring-2 ring-gradient-to-r from-pink-200 to-indigo-200 hover:shadow-2xl transition-all duration-500 group">
             <div className="flex-1 min-w-60">
               <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-sm font-bold mb-4 shadow-lg">
-                🤖 LLM-Powered
+                🤖 Impulsionado por LLM
               </div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent">
-                Analyze photos and invoices with AI
+                Analise fotos e faturas com IA
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-blue-600 mr-3 text-lg">✨</span>
-                  Upload your receipts or invoices in PDF for automatic recognition
+                  Envie seus recibos ou faturas em PDF para reconhecimento automático
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-600 mr-3 text-lg">✨</span>
-                  Extract key information like dates, items, and vendors
+                  Extraia informações essenciais, como datas, itens e fornecedores
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-600 mr-3 text-lg">✨</span>
-                  Works with any language and any photo quality
+                  Funciona com qualquer idioma e qualquer qualidade de foto
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-600 mr-3 text-lg">✨</span>
-                  Automatically organize everything into a structured database
+                  Organize automaticamente tudo em um banco de dados estruturado
                 </li>
                 <li className="flex items-center">
                   <span className="text-blue-600 mr-3 text-lg">✨</span>
-                  Bulk upload and analyze multiple files at once
+                  Envie e analise vários arquivos em lote
                 </li>
               </ul>
             </div>
             <div className="flex-1 relative aspect-auto rounded-3xl overflow-hidden shadow-2xl ring-4 ring-gradient-to-r from-blue-200 to-indigo-200 hover:scale-105 transition-all duration-500">
-              <Image src="/landing/ai-scanner.webp" alt="AI Document Analyzer" width={1900} height={1524} />
+              <Image src="/landing/ai-scanner.webp" alt="Analisador de documentos com IA" width={1900} height={1524} />
             </div>
           </div>
 
@@ -129,71 +130,71 @@ export default function LandingPage() {
           <div className="flex flex-wrap items-center gap-12 mb-20 bg-gradient-to-br from-white via-green-50/30 to-emerald-50/30 p-8 rounded-3xl shadow-xl ring-2 ring-gradient-to-r from-green-200 to-emerald-200 hover:shadow-2xl transition-all duration-500 group flex-row-reverse">
             <div className="flex-1 min-w-60">
               <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm font-bold mb-4 shadow-lg">
-                💱 Currency Converter
+                💱 Conversor de Moedas
               </div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-green-700 to-emerald-700 bg-clip-text text-transparent">
-                Automatically convert currencies (even crypto!)
+                Converta moedas automaticamente (inclusive cripto!)
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-green-600 mr-3 text-lg">💰</span>
-                  Detects foreign currencies and converts it to yours
+                  Identifica moedas estrangeiras e as converte para a sua
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 mr-3 text-lg">💰</span>
-                  Knows historical exchange rates on a date of transaction
+                  Conhece taxas de câmbio históricas na data da transação
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 mr-3 text-lg">💰</span>
-                  Supports 170+ world currencies
+                  Suporta 170+ moedas ao redor do mundo
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 mr-3 text-lg">💰</span>
-                  Works with popular cryptocurrencies (BTC, ETH, LTC, etc.)
+                  Funciona com criptomoedas populares (BTC, ETH, LTC etc.)
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 mr-3 text-lg">💰</span>
-                  Still allows you to fill it manually
+                  Ainda permite que você preencha manualmente
                 </li>
               </ul>
             </div>
             <div className="flex-1 relative aspect-auto rounded-3xl overflow-hidden shadow-2xl ring-4 ring-gradient-to-r from-green-200 to-emerald-200 hover:scale-105 transition-all duration-500">
-              <Image src="/landing/multi-currency.webp" alt="Currency Converter" width={1400} height={1005} />
+              <Image src="/landing/multi-currency.webp" alt="Conversor de moedas" width={1400} height={1005} />
             </div>
           </div>
 
           {/* Transaction Table Feature */}
           <div className="flex flex-wrap items-center gap-12 mb-20 bg-gradient-to-br from-white via-pink-50/30 to-rose-50/30 p-8 rounded-3xl shadow-xl ring-2 ring-gradient-to-r from-pink-200 to-rose-200 hover:shadow-2xl transition-all duration-500 group flex-row-reverse">
             <div className="flex-1 relative aspect-auto rounded-3xl overflow-hidden shadow-2xl ring-4 ring-gradient-to-r from-pink-200 to-rose-200 hover:scale-105 transition-all duration-500">
-              <Image src="/landing/transactions.webp" alt="Transactions Table" width={2000} height={1279} />
+              <Image src="/landing/transactions.webp" alt="Tabela de transações" width={2000} height={1279} />
             </div>
             <div className="flex-1  min-w-60">
               <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-rose-600 text-white text-sm font-bold mb-4 shadow-lg">
-                🔍 Filters & Categories
+                🔍 Filtros e Categorias
               </div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-pink-700 to-rose-700 bg-clip-text text-transparent">
-                Organize your transactions using fully customizable categories, projects and fields
+                Organize suas transações com categorias, projetos e campos totalmente personalizáveis
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-pink-600 mr-3 text-lg">📊</span>
-                  Absolute freedom to create custom categories, projects and fields
+                  Liberdade total para criar categorias, projetos e campos personalizados
                 </li>
                 <li className="flex items-center">
                   <span className="text-pink-600 mr-3 text-lg">📊</span>
-                  Add, edit and manage your transactions
+                  Adicione, edite e gerencie suas transações
                 </li>
                 <li className="flex items-center">
                   <span className="text-pink-600 mr-3 text-lg">📊</span>
-                  Filter by any column, category or date range
+                  Filtre por qualquer coluna, categoria ou intervalo de datas
                 </li>
                 <li className="flex items-center">
                   <span className="text-pink-600 mr-3 text-lg">📊</span>
-                  Customize which columns to show in the table
+                  Personalize quais colunas serão exibidas na tabela
                 </li>
                 <li className="flex items-center">
                   <span className="text-pink-600 mr-3 text-lg">📊</span>
-                  Import transactions from CSV
+                  Importe transações a partir de CSV
                 </li>
               </ul>
             </div>
@@ -202,35 +203,35 @@ export default function LandingPage() {
           {/* Invoice Generator */}
           <div className="flex flex-wrap items-center gap-12 mb-20 bg-gradient-to-br from-white via-purple-50/30 to-indigo-50/30 p-8 rounded-3xl shadow-xl ring-2 ring-gradient-to-r from-purple-200 to-indigo-200 hover:shadow-2xl transition-all duration-500 group">
             <div className="max-w-sm flex-1 relative aspect-auto rounded-3xl overflow-hidden shadow-2xl ring-4 ring-gradient-to-r from-purple-200 to-indigo-200 hover:scale-105 transition-all duration-500">
-              <Image src="/landing/invoice-generator.webp" alt="Invoice Generator" width={1800} height={1081} />
+              <Image src="/landing/invoice-generator.webp" alt="Gerador de faturas" width={1800} height={1081} />
             </div>
             <div className="flex-1 min-w-60">
               <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm font-bold mb-4 shadow-lg">
-                📋 Invoice Generator
+                📋 Gerador de Faturas
               </div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-purple-700 to-indigo-700 bg-clip-text text-transparent">
-                Create custom invoices
+                Crie faturas personalizadas
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">📄</span>
-                  Advanced invoice generator to create any invoice in any language
+                  Um gerador avançado de faturas para criar qualquer fatura em qualquer idioma
                 </li>
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">📄</span>
-                  Edit any field, even labels and titles
+                  Edite qualquer campo, inclusive rótulos e títulos
                 </li>
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">📄</span>
-                  Export invoices to PDF or as transactions
+                  Exporte faturas em PDF ou como transações
                 </li>
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">📄</span>
-                  Save invoices as templates to reuse them later
+                  Salve faturas como modelos para reutilizá-las posteriormente
                 </li>
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">📄</span>
-                  Native support for both included and excluded taxes (VAT, GST, etc.)
+                  Suporte nativo para impostos incluídos e não incluídos (IVA/VAT, GST etc.)
                 </li>
               </ul>
             </div>
@@ -240,36 +241,36 @@ export default function LandingPage() {
           <div className="flex flex-wrap items-center gap-12 mb-20 bg-gradient-to-br from-white via-violet-50/30 to-purple-50/30 p-8 rounded-3xl shadow-xl ring-2 ring-gradient-to-r from-violet-200 to-purple-200 hover:shadow-2xl transition-all duration-500 group">
             <div className="flex-1 min-w-60">
               <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-violet-500 to-purple-600 text-white text-sm font-bold mb-4 shadow-lg">
-                🎨 Control over AI
+                🎨 Controle da IA
               </div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-violet-700 to-purple-700 bg-clip-text text-transparent">
-                Tune any LLM prompt to extract anything you need
+                Ajuste qualquer prompt de LLM para extrair exatamente o que você necessita
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-violet-600 mr-3 text-lg">🔧</span>
-                  Expand and improve your TaxHacker instance with custom LLM prompts
+                  Amplie e aprimore sua instância do TaxHacker com prompts personalizados de LLM
                 </li>
                 <li className="flex items-center">
                   <span className="text-violet-600 mr-3 text-lg">🔧</span>
-                  Create custom fields and categories and tell AI how to parse them for you
+                  Crie campos e categorias personalizados e explique à IA como interpretá-los
                 </li>
                 <li className="flex items-center">
                   <span className="text-violet-600 mr-3 text-lg">🔧</span>
-                  Extract any additional information you need
+                  Extraia quaisquer informações adicionais de que você precisa
                 </li>
                 <li className="flex items-center">
                   <span className="text-violet-600 mr-3 text-lg">🔧</span>
-                  Automatically categorize by project or category
+                  Classifique automaticamente por projeto ou categoria
                 </li>
                 <li className="flex items-center">
                   <span className="text-violet-600 mr-3 text-lg">🔧</span>
-                  Ask AI to assess risk level or any other criteria
+                  Solicite à IA que avalie o nível de risco ou quaisquer outros critérios
                 </li>
               </ul>
             </div>
             <div className="flex-1 relative aspect-auto rounded-3xl overflow-hidden shadow-2xl ring-4 ring-gradient-to-r from-violet-200 to-purple-200 hover:scale-105 transition-all duration-500">
-              <Image src="/landing/custom-llm.webp" alt="Custom LLM promts" width={1800} height={1081} />
+              <Image src="/landing/custom-llm.webp" alt="Prompts personalizados de LLM" width={1800} height={1081} />
             </div>
           </div>
 
@@ -277,33 +278,33 @@ export default function LandingPage() {
           <div className="flex flex-wrap items-center gap-12 mb-20 bg-gradient-to-br from-white via-orange-50/30 to-amber-50/30 p-8 rounded-3xl shadow-xl ring-2 ring-gradient-to-r from-orange-200 to-amber-200 hover:shadow-2xl transition-all duration-500 group flex-row-reverse">
             <div className="flex-1 min-w-60">
               <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-amber-600 text-white text-sm font-bold mb-4 shadow-lg">
-                📦 Self-hosting & Data Export
+                📦 Auto-hospedagem e Exportação de Dados
               </div>
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-700 to-amber-700 bg-clip-text text-transparent">
-                Your Data — Your Rules
+                Seus dados — suas regras
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-orange-600 mr-3 text-lg">📤</span>
-                  Deploy your own instance of TaxHacker for 100% privacy
+                  Implantar sua própria instância do TaxHacker para 100% de privacidade
                 </li>
                 <li className="flex items-center">
                   <span className="text-orange-600 mr-3 text-lg">📤</span>
-                  Export your transactions to CSV for tax prep
+                  Exporte suas transações para CSV para apoiar a preparação do seu imposto
                 </li>
                 <li className="flex items-center">
                   <span className="text-orange-600 mr-3 text-lg">📤</span>
-                  Full-text search across documents and invoices
+                  Pesquisa de texto completo em documentos e faturas
                 </li>
                 <li className="flex items-center">
                   <span className="text-orange-600 mr-3 text-lg">📤</span>
-                  Download full data archive to migrate to another service. We don't take away or limit what you do with
-                  your data
+                  Baixe o arquivo completo dos seus dados para migrar para outro serviço. Não retiramos nem limitamos o que
+                  você faz com seus dados
                 </li>
               </ul>
             </div>
             <div className="flex-1 relative aspect-auto rounded-3xl overflow-hidden shadow-2xl ring-4 ring-gradient-to-r from-orange-200 to-amber-200 hover:scale-105 transition-all duration-500">
-              <Image src="/landing/export.webp" alt="Export" width={1200} height={1081} />
+              <Image src="/landing/export.webp" alt="Exportação" width={1200} height={1081} />
             </div>
           </div>
         </div>
@@ -318,34 +319,34 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-indigo-600 bg-clip-text text-transparent">
-              Choose Your Version of TaxHacker
+              Escolha a sua versão do TaxHacker
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-16">
             {/* Self-Hosted Version */}
             <div className="bg-gradient-to-br from-white via-violet-50/50 to-indigo-50/50 p-8 rounded-3xl shadow-xl ring-2 ring-gradient-to-r from-violet-200 to-indigo-200 hover:shadow-2xl transition-all duration-500 group">
               <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 text-white text-sm font-bold mb-6 shadow-lg">
-                🏠 Use Your Own Server
+                🏠 Use seu próprio servidor
               </div>
               <h3 className="text-2xl font-bold mb-4">
-                <ColoredText>Self-Hosted Edition</ColoredText>
+                <ColoredText>Edição auto-hospedada</ColoredText>
               </h3>
               <ul className="space-y-3 text-gray-700 mb-8">
                 <li className="flex items-center">
                   <span className="text-indigo-600 mr-3 text-lg">🆓</span>
-                  Free and Open Source
+                  Gratuito e de código aberto
                 </li>
                 <li className="flex items-center">
                   <span className="text-indigo-600 mr-3 text-lg">🔒</span>
-                  Complete control over your data
+                  Controle total sobre seus dados
                 </li>
                 <li className="flex items-center">
                   <span className="text-indigo-600 mr-3 text-lg">🏗️</span>
-                  Deploy at your own infrastructure or home server
+                  Implante em sua infraestrutura ou em seu servidor doméstico
                 </li>
                 <li className="flex items-center">
                   <span className="text-indigo-600 mr-3 text-lg">🔑</span>
-                  Bring your own keys (OpenAI, Gemini, Mistral, etc.)
+                  Utilize suas próprias chaves (OpenAI, Gemini, Mistral etc.)
                 </li>
               </ul>
               <Link
@@ -353,34 +354,34 @@ export default function LandingPage() {
                 target="_blank"
                 className="block w-full text-center px-6 py-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold rounded-full hover:from-violet-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-110"
               >
-                Github + Docker Compose 🐳
+                GitHub + Docker Compose 🐳
               </Link>
             </div>
 
             {/* Cloud Version */}
             <div className="bg-gradient-to-br from-white via-pink-50/50 to-purple-50/50 p-8 rounded-3xl shadow-xl ring-2 ring-gradient-to-r from-pink-200 to-purple-200 hover:shadow-2xl transition-all duration-500 group relative">
               <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm font-bold mb-6 shadow-lg">
-                ☁️ We Host It For You
+                ☁️ Nós hospedamos para você
               </div>
               <h3 className="text-2xl font-bold mb-4">
-                <ColoredText>Cloud Edition</ColoredText>
+                <ColoredText>Edição em nuvem</ColoredText>
               </h3>
               <ul className="space-y-3 text-gray-700 mb-8">
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">🎯</span>
-                  SaaS version if you don't want to hassle with own servers and deployments
+                  Versão SaaS para quem não deseja lidar com servidores e implantações
                 </li>
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">🤖</span>
-                  We provide you with AI keys and storage
+                  Fornecemos chaves de IA e armazenamento
                 </li>
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">💳</span>
-                  Yearly subscription plans. No hidden fees
+                  Planos de assinatura anuais. Sem taxas ocultas
                 </li>
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">🚀</span>
-                  Automatic updates and new features
+                  Atualizações automáticas e novos recursos
                 </li>
               </ul>
               <button
@@ -388,7 +389,7 @@ export default function LandingPage() {
                 disabled
                 className="block w-full text-center px-6 py-4 bg-gradient-to-r from-gray-300 to-gray-400 text-gray-700 font-bold rounded-full shadow-xl opacity-80 cursor-not-allowed"
               >
-                Temporarily unavailable
+                Indisponível temporariamente
               </button>
             </div>
           </div>
@@ -403,10 +404,10 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-indigo-600 bg-clip-text text-transparent">
-              Upcoming Features
+              Funcionalidades futuras
             </h2>
             <p className="text-gray-700 max-w-2xl mx-auto font-medium">
-              We&apos;re a small, indie project constantly improving. Here&apos;s what we&apos;re working on next.
+              Somos um pequeno projeto independente, em constante evolução. A seguir, veja no que estamos trabalhando.
             </p>
           </div>
 
@@ -416,25 +417,25 @@ export default function LandingPage() {
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-3xl">🤖</span>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-purple-700 to-indigo-700 bg-clip-text text-transparent">
-                  Better AI Analytics & Agents
+                  Análises e agentes de IA aprimorados
                 </h3>
               </div>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">🔮</span>
-                  Income & expense insights
+                  Insights de receitas e despesas
                 </li>
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">🔮</span>
-                  AI agents to automate your workflows
+                  Agentes de IA para automatizar seus fluxos de trabalho
                 </li>
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">🔮</span>
-                  Recommendations for tax optimization
+                  Recomendações para otimização tributária
                 </li>
                 <li className="flex items-center">
                   <span className="text-purple-600 mr-3 text-lg">🔮</span>
-                  Custom and local LLM models
+                  Modelos LLM personalizados e locais
                 </li>
               </ul>
             </div>
@@ -444,21 +445,21 @@ export default function LandingPage() {
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-3xl">📊</span>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-pink-700 to-rose-700 bg-clip-text text-transparent">
-                  Smart Reports & Reminders
+                  Relatórios inteligentes e lembretes
                 </h3>
               </div>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-pink-600 mr-3 text-lg">📈</span>
-                  Monthly or quarterly VAT reports
+                  Relatórios de IVA mensais ou trimestrais
                 </li>
                 <li className="flex items-center">
                   <span className="text-pink-600 mr-3 text-lg">📈</span>
-                  Tax reminders
+                  Lembretes de impostos
                 </li>
                 <li className="flex items-center">
                   <span className="text-pink-600 mr-3 text-lg">📈</span>
-                  Annual income & expense reports
+                  Relatórios anuais de receitas e despesas
                 </li>
               </ul>
             </div>
@@ -468,21 +469,21 @@ export default function LandingPage() {
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-3xl">📥</span>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-green-700 to-emerald-700 bg-clip-text text-transparent">
-                  Multiple Transaction Review
+                  Revisão de múltiplas transações
                 </h3>
               </div>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-green-600 mr-3 text-lg">💳</span>
-                  Bank statement analysis
+                  Análise de extratos bancários
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 mr-3 text-lg">💳</span>
-                  Automatic data completeness checks
+                  Verificações automáticas de completude dos dados
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 mr-3 text-lg">💳</span>
-                  Unpaid invoice tracking
+                  Rastreamento de faturas em aberto
                 </li>
               </ul>
             </div>
@@ -492,21 +493,21 @@ export default function LandingPage() {
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-3xl">🧩</span>
                 <h3 className="text-xl font-bold bg-gradient-to-r from-orange-700 to-amber-700 bg-clip-text text-transparent">
-                  Presets and Plugins
+                  Predefinições e plugins
                 </h3>
               </div>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-orange-600 mr-3 text-lg">🌍</span>
-                  Presets for different countries and industries
+                  Predefinições para diferentes países e segmentos
                 </li>
                 <li className="flex items-center">
                   <span className="text-orange-600 mr-3 text-lg">🌍</span>
-                  Custom reports for various use-cases
+                  Relatórios personalizados para diferentes casos de uso
                 </li>
                 <li className="flex items-center">
                   <span className="text-orange-600 mr-3 text-lg">🌍</span>
-                  Community plugins and reports
+                  Plugins e relatórios da comunidade
                 </li>
               </ul>
             </div>
@@ -515,10 +516,10 @@ export default function LandingPage() {
           {/* Stay Tuned / GitHub CTA */}
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-2xl shadow-sm ring-1 ring-gray-100">
             <div className="max-w-2xl mx-auto text-center">
-              <h3 className="text-2xl font-semibold mb-4">Stay Tuned</h3>
+              <h3 className="text-2xl font-semibold mb-4">Fique por dentro</h3>
               <p className="text-gray-600 mb-6">
-                We&apos;re working hard on making TaxHacker useful for everyone. Star and watch our GitHub repo to get
-                notified about new features and releases.
+                Estamos trabalhando para tornar o TaxHacker útil para todos. Acompanhe nosso repositório no GitHub e seja notificado
+                sobre novos recursos e lançamentos.
               </p>
               <div className="flex flex-col gap-4 max-w-md mx-auto">
                 <div className="flex flex-wrap items-center justify-center gap-4">
@@ -528,7 +529,7 @@ export default function LandingPage() {
                     rel="noreferrer"
                     className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-full hover:opacity-90 transition-all shadow-lg shadow-purple-500/20"
                   >
-                    Open GitHub repo
+                    Abrir repositório do GitHub
                   </a>
                 </div>
               </div>
@@ -539,7 +540,7 @@ export default function LandingPage() {
 
       <footer className="py-8 px-8 bg-gradient-to-r from-pink-50 to-indigo-50 border-t-2 border-gradient-to-r from-pink-200 to-indigo-200">
         <div className="max-w-7xl mx-auto text-center text-sm text-gray-600">
-          Made with ❤️ in Berlin by{" "}
+          Criado com ❤️ em Berlim por{" "}
           <Link
             href="https://github.com/vas3k"
             className="underline font-semibold hover:text-pink-600 transition-colors"
@@ -555,35 +556,35 @@ export default function LandingPage() {
                 href={`mailto:${config.app.supportEmail}`}
                 className="text-sm text-gray-600 hover:text-pink-600 font-medium transition-colors"
               >
-                Contact Us
+                Fale Conosco
               </Link>
               <Link
                 href="/docs/terms"
                 className="text-sm text-gray-600 hover:text-pink-600 font-medium transition-colors"
               >
-                Terms of Service
+                Termos de Serviço
               </Link>
               <Link
                 href="/docs/privacy_policy"
                 className="text-sm text-gray-600 hover:text-pink-600 font-medium transition-colors"
               >
-                Privacy Policy
+                Política de Privacidade
               </Link>
               <Link href="/docs/ai" className="text-sm text-gray-600 hover:text-pink-600 font-medium transition-colors">
-                AI Use Disclosure
+                Aviso de Uso de IA
               </Link>
               <Link
                 href="/docs/cookie"
                 className="text-sm text-gray-600 hover:text-pink-600 font-medium transition-colors"
               >
-                Cookie Policy
+                Política de Cookies
               </Link>
               <Link
                 href="https://github.com/vas3k/TaxHacker"
                 target="_blank"
                 className="text-sm text-gray-600 hover:text-pink-600 font-medium transition-colors"
               >
-                Source Code
+                Código-fonte
               </Link>
             </div>
           </div>

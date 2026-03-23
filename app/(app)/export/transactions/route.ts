@@ -35,7 +35,7 @@ export async function GET(request: Request) {
     const csvStream = format({ headers: fieldKeys, writeBOM: true, writeHeaders: false })
 
     // Custom CSV headers
-    const headers = fieldKeys.map((field) => existingFields.find((f) => f.code === field)?.name ?? "UNKNOWN")
+    const headers = fieldKeys.map((field) => existingFields.find((f) => f.code === field)?.name ?? "DESCONHECIDO")
     csvStream.write(headers)
 
     // Process transactions in chunks to avoid memory issues
@@ -93,7 +93,7 @@ export async function GET(request: Request) {
     // Process files in chunks
     const filesFolder = zip.folder("files")
     if (!filesFolder) {
-      throw new Error("Failed to create zip folder")
+      throw new Error("Falha ao criar a pasta ZIP")
     }
 
     let totalFilesProcessed = 0

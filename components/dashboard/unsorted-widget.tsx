@@ -11,7 +11,9 @@ export default function DashboardUnsortedWidget({ files }: { files: File[] }) {
       <CardHeader>
         <CardTitle>
           <Link href="/unsorted">
-            {files.length > 0 ? `${files.length} unsorted files` : "No unsorted files"} &rarr;
+                {files.length > 0
+                  ? `${files.length} arquivo(s) não classificado(s)`
+                  : "Nenhum arquivo não classificado"} &rarr;
           </Link>
         </CardTitle>
       </CardHeader>

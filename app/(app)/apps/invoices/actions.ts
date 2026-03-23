@@ -37,7 +37,7 @@ export async function addNewTemplateAction(user: User, template: InvoiceTemplate
 
 export async function deleteTemplateAction(user: User, templateId: string) {
   const appData = (await getAppData(user, "invoices")) as InvoiceAppData | null
-  if (!appData) return { success: false, error: "No app data found" }
+  if (!appData) return { success: false, error: "Nenhum dado do aplicativo foi encontrado" }
 
   const updatedTemplates = appData.templates.filter((t) => t.id !== templateId)
   const appDataResult = await setAppData(user, "invoices", { ...appData, templates: updatedTemplates })
@@ -61,7 +61,7 @@ export async function saveInvoiceAsTransactionAction(
 
     // Create transaction
     const transaction = await createTransaction(user.id, {
-      name: `Invoice #${formData.invoiceNumber || "unknown"}`,
+      name: `Fatura #${formData.invoiceNumber || "desconhecida"}`,
       merchant: `${formData.billTo.split("\n")[0]}`,
       total: totalAmount * 100,
       currencyCode: formData.currency,
@@ -76,14 +76,14 @@ export async function saveInvoiceAsTransactionAction(
     if (!isEnoughStorageToUploadFile(user, pdfBuffer.length)) {
       return {
         success: false,
-        error: "Insufficient storage to save invoice PDF",
+        error: "Armazenamento insuficiente para salvar o PDF da fatura",
       }
     }
 
     if (isSubscriptionExpired(user)) {
       return {
         success: false,
-        error: "Your subscription has expired, please upgrade your account or buy new subscription plan",
+        error: "Sua assinatura expirou. Atualize sua conta ou adquira um novo plano.",
       }
     }
 
@@ -120,7 +120,7 @@ export async function saveInvoiceAsTransactionAction(
     console.error("Failed to save invoice as transaction:", error)
     return {
       success: false,
-      error: `Failed to save invoice as transaction: ${error}`,
+      error: `Falha ao salvar a fatura como transação: ${error}`,
     }
   }
 }

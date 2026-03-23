@@ -16,17 +16,17 @@ export default async function ProjectsSettingsPage() {
 
   return (
     <div className="container">
-      <h1 className="text-2xl font-bold mb-2">Projects</h1>
+      <h1 className="text-2xl font-bold mb-2">Projetos</h1>
       <p className="text-sm text-gray-500 mb-6 max-w-prose">
-        Use projects to differentiate between the type of activities you do For example: Freelancing, YouTube channel,
-        Blogging. Projects are just a convenient way to separate statistics.
+        Use projetos para diferenciar o tipo de atividades que você realiza. Por exemplo: trabalho freelancer, canal do
+        YouTube e blog. Projetos são apenas uma forma conveniente de separar as estatísticas.
       </p>
       <CrudTable
         items={projectsWithActions}
         columns={[
-          { key: "name", label: "Name", editable: true },
-          { key: "llm_prompt", label: "LLM Prompt", editable: true },
-          { key: "color", label: "Color", type: "color", defaultValue: randomHexColor(), editable: true },
+          { key: "name", label: "Nome", editable: true },
+          { key: "llm_prompt", label: "Prompt de LLM", editable: true },
+          { key: "color", label: "Cor", type: "color", defaultValue: randomHexColor(), editable: true },
         ]}
         onDelete={async (code) => {
           "use server"

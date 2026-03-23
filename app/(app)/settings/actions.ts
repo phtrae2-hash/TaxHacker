@@ -63,7 +63,7 @@ export async function saveProfileAction(
       const uploadedAvatarPath = await uploadStaticImage(user, avatarFile, "avatar.webp", 500, 500)
       avatarUrl = `/files/static/${path.basename(uploadedAvatarPath)}`
     } catch (error) {
-      return { success: false, error: "Failed to upload avatar: " + error }
+      return { success: false, error: "Falha ao enviar o avatar: " + error }
     }
   }
 
@@ -75,7 +75,7 @@ export async function saveProfileAction(
       const uploadedBusinessLogoPath = await uploadStaticImage(user, businessLogoFile, "businessLogo.png", 500, 500)
       businessLogoUrl = `/files/static/${path.basename(uploadedBusinessLogoPath)}`
     } catch (error) {
-      return { success: false, error: "Failed to upload business logo: " + error }
+      return { success: false, error: "Falha ao enviar o logotipo da empresa: " + error }
     }
   }
 
@@ -137,7 +137,7 @@ export async function deleteProjectAction(userId: string, code: string) {
   try {
     await deleteProject(userId, code)
   } catch (error) {
-    return { success: false, error: "Failed to delete project" + error }
+    return { success: false, error: "Falha ao excluir o projeto: " + error }
   }
   revalidatePath("/settings/projects")
   return { success: true }
@@ -175,7 +175,7 @@ export async function deleteCurrencyAction(userId: string, code: string) {
   try {
     await deleteCurrency(userId, code)
   } catch (error) {
-    return { success: false, error: "Failed to delete currency" + error }
+    return { success: false, error: "Falha ao excluir a moeda: " + error }
   }
   revalidatePath("/settings/currencies")
   return { success: true }
@@ -203,10 +203,10 @@ export async function addCategoryAction(userId: string, data: Prisma.CategoryCre
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
       return {
         success: false,
-        error: `Category with the code "${code}" already exists. Try a different name.`,
+        error: `Já existe uma categoria com o código "${code}". Por favor, escolha um nome diferente.`,
       }
     }
-    return { success: false, error: "Failed to create category" }
+    return { success: false, error: "Falha ao criar a categoria" }
   }
 }
 
@@ -231,7 +231,7 @@ export async function deleteCategoryAction(userId: string, code: string) {
   try {
     await deleteCategory(userId, code)
   } catch (error) {
-    return { success: false, error: "Failed to delete category" + error }
+    return { success: false, error: "Falha ao excluir a categoria: " + error }
   }
   revalidatePath("/settings/categories")
   return { success: true }
@@ -283,7 +283,7 @@ export async function deleteFieldAction(userId: string, code: string) {
   try {
     await deleteField(userId, code)
   } catch (error) {
-    return { success: false, error: "Failed to delete field" + error }
+    return { success: false, error: "Falha ao excluir o campo: " + error }
   }
   revalidatePath("/settings/fields")
   return { success: true }

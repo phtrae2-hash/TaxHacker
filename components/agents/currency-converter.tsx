@@ -12,7 +12,7 @@ async function getCurrencyRate(currencyCodeFrom: string, currencyCodeTo: string,
   if (!response.ok) {
     const errorData = await response.json()
     console.log("Currency API error:", errorData.error)
-    throw new Error(errorData.error || "Failed to fetch currency rate")
+    throw new Error(errorData.error || "Falha ao buscar a taxa de câmbio")
   }
 
   const data = await response.json()
@@ -51,7 +51,7 @@ export const CurrencyConverterTool = ({
       console.error("Error fetching currency rates:", error)
       setExchangeRate(0)
       setConvertedTotal(0)
-      setError(error instanceof Error ? error.message : "Failed to fetch currency rate")
+      setError(error instanceof Error ? error.message : "Falha ao buscar a taxa de câmbio")
     } finally {
       setIsLoading(false)
     }
@@ -79,7 +79,7 @@ export const CurrencyConverterTool = ({
       {isLoading ? (
         <div className="flex flex-row items-center gap-2 text-sm text-muted-foreground">
           <Loader2 className="w-4 h-4 animate-spin" />
-          <div className="font-semibold">Loading exchange rates...</div>
+          <div className="font-semibold">Carregando taxas de câmbio...</div>
         </div>
       ) : (
         <div className="flex flex-col gap-2">
@@ -100,13 +100,15 @@ export const CurrencyConverterTool = ({
             />
           </div>
           {!error && (
-            <div className="text-xs text-muted-foreground">The exchange rate will be added to the transaction</div>
+            <div className="text-xs text-muted-foreground">
+              A taxa de câmbio será adicionada à transação
+            </div>
           )}
           {error && (
             <div className="flex flex-row gap-2">
               <FormError className="mt-0 text-sm">{error}</FormError>
               <Button variant="outline" size="sm" className="text-xs" onClick={handleRestart}>
-                Retry
+                Tentar novamente
               </Button>
             </div>
           )}

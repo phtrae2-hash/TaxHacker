@@ -36,12 +36,13 @@ export default async function TransactionPage({ params }: { params: Promise<{ tr
         {incompleteFields.length > 0 && (
           <div className="w-full flex flex-col gap-1 rounded-md bg-yellow-50 p-5">
             <span>
-              Some fields are incomplete: <strong>{incompleteFields.map((field) => field.name).join(", ")}</strong>
+              Alguns campos estão incompletos:{" "}
+              <strong>{incompleteFields.map((field) => field.name).join(", ")}</strong>
             </span>
             <span className="text-xs text-muted-foreground">
-              You can decide which fields are required for you in{" "}
+              Você pode definir quais campos são obrigatórios para você em{" "}
               <Link href="/settings/fields" className="underline">
-                Fields settings
+                Configurações de campos
               </Link>
               .
             </span>
@@ -59,7 +60,7 @@ export default async function TransactionPage({ params }: { params: Promise<{ tr
 
           {transaction.text && (
             <details className="mt-10">
-              <summary className="cursor-pointer text-sm font-medium">Recognized Text</summary>
+              <summary className="cursor-pointer text-sm font-medium">Texto reconhecido</summary>
               <Card className="flex items-stretch p-2 max-w-6xl">
                 <div className="flex-1">
                   <FormTextarea

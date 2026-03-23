@@ -35,7 +35,7 @@ export function UploadButton({ children, ...props }: { children: React.ReactNode
           setTimeout(() => showNotification({ code: "sidebar.unsorted", message: "" }), 3000)
           router.push("/unsorted")
         } else {
-          setUploadError(result.error ? result.error : "Something went wrong...")
+          setUploadError(result.error ? result.error : "Ocorreu um erro ao enviar. Tente novamente.")
         }
         setIsUploading(false)
       })
@@ -63,7 +63,7 @@ export function UploadButton({ children, ...props }: { children: React.ReactNode
         {isUploading ? (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Uploading...
+            Enviando...
           </>
         ) : (
           <>{children}</>

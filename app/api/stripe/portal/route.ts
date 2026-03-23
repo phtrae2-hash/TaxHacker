@@ -5,16 +5,16 @@ import { NextRequest, NextResponse } from "next/server"
 export async function GET(request: NextRequest) {
   const user = await getCurrentUser()
   if (!user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+    return NextResponse.json({ error: "Não autorizado" }, { status: 401 })
   }
 
   if (!stripeClient) {
-    return new NextResponse("Stripe client is not initialized", { status: 500 })
+    return new NextResponse("O cliente do Stripe não está inicializado", { status: 500 })
   }
 
   try {
     if (!user.stripeCustomerId) {
-      return NextResponse.json({ error: "No Stripe customer ID found for this user" }, { status: 400 })
+      return NextResponse.json({ error: "Não foi encontrado o ID do cliente do Stripe para este usuário" }, { status: 400 })
     }
 
     const portalSession = await stripeClient.billingPortal.sessions.create({
@@ -25,6 +25,6 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(portalSession.url)
   } catch (error) {
     console.error("Stripe portal error:", error)
-    return NextResponse.json({ error: "Failed to create Stripe portal session" }, { status: 500 })
+    return NextResponse.json({ error: "Falha ao criar a sessão do portal do Stripe" }, { status: 500 })
   }
 }

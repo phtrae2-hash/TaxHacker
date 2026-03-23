@@ -18,7 +18,7 @@ export async function WelcomeWidget() {
       <div className="flex flex-col">
         <CardTitle className="flex items-center justify-between">
           <span className="text-2xl font-bold">
-            <ColoredText>Hey, I&apos;m TaxHacker 👋</ColoredText>
+            <ColoredText>Olá, eu sou o TaxHacker 👋</ColoredText>
           </span>
           <Button
             variant="outline"
@@ -34,55 +34,58 @@ export async function WelcomeWidget() {
         </CardTitle>
         <CardDescription className="mt-5">
           <p className="mb-3">
-            I&apos;m a little accountant app that helps you deal with endless receipts, checks and invoices with (you
-            guessed it) AI. Here&apos;s what I can do:
+            Sou um aplicativo de contabilidade que ajuda o(a) usuário(a) a lidar com recibos, cheques e faturas sem fim
+            com (como você já imaginou) IA. Veja o que eu posso fazer:
           </p>
           <ul className="mb-5 list-disc pl-5 space-y-1">
             <li>
-              <strong>Upload me a photo or a PDF</strong> and I will recognize, categorize and save it as a transaction
-              for your tax advisor.
+              <strong>Envie uma foto ou um PDF</strong> e eu vou reconhecê-lo, categorizá-lo e salvá-lo como uma
+              transação para seu(a) consultor(a) tributário(a).
             </li>
             <li>
-              I can <strong>automatically convert currencies</strong> and look up exchange rates for a given date.
+              Eu posso <strong>converter moedas automaticamente</strong> e consultar as taxas de câmbio para uma data
+              específica.
             </li>
             <li>
-              I even <strong>support crypto!</strong> Historical exchange rates for staking too.
+              Eu também <strong>suporto cripto!</strong> Inclusive com taxas históricas para staking.
             </li>
             <li>
-              All <strong>LLM prompts are configurable</strong>: for fields, categories and projects. You can go to
-              settings and change them however you want.
+              Todos os <strong>prompts de LLM são configuráveis</strong>: para campos, categorias e projetos. Você pode
+              acessar Configurações e ajustá-los da forma que preferir.
             </li>
             <li>
-              I save data in a <strong>local SQLite database</strong> and can export it to CSV and ZIP archives.
+              Eu salvo os dados em um <strong>banco de dados SQLite local</strong> e posso exportá-los em arquivos CSV
+              e ZIP.
             </li>
             <li>
-              You can even <strong>create your own new fields</strong> to be analyzed and they will be included in the
-              CSV export for your tax advisor.
+              Você também pode <strong>criar seus próprios campos</strong> para serem analisados e eles serão incluídos
+              na exportação CSV para seu(a) consultor(a) tributário(a).
             </li>
             <li>
-              I&apos;m still <strong>very young</strong> and can make mistakes. Use me at your own risk!
+              Eu ainda sou <strong>bem novo</strong> e posso cometer erros. Use por sua conta e risco!
             </li>
           </ul>
           <p className="mb-3">
-            While I can save you a lot of time in categorizing transactions and generating reports, I still highly
-            recommend giving the results to a professional tax advisor for review when filing your taxes!
+            Embora eu possa economizar muito tempo na categorização de transações e na geração de relatórios, ainda
+            recomendo fortemente que os resultados sejam revisados por um(a) consultor(a) tributário(a) profissional
+            ao declarar seus impostos!
           </p>
         </CardDescription>
         <div className="mt-2">
           <Link href="https://github.com/vas3k/TaxHacker" className="text-blue-500 hover:underline">
-            Source Code
+            Código-fonte
           </Link>
           <span className="mx-2">|</span>
           <Link href="https://github.com/vas3k/TaxHacker/issues" className="text-blue-500 hover:underline">
-            Request New Feature
+            Solicitar novo recurso
           </Link>
           <span className="mx-2">|</span>
           <Link href="https://github.com/vas3k/TaxHacker/issues" className="text-blue-500 hover:underline">
-            Report a Bug
+            Relatar um erro
           </Link>
           <span className="mx-2">|</span>
           <Link href="mailto:me@vas3k.ru" className="text-blue-500 hover:underline">
-            Contact the Author
+            Contatar o autor
           </Link>
         </div>
         <div className="flex flex-wrap gap-2 mt-8">
@@ -90,32 +93,32 @@ export async function WelcomeWidget() {
             <Link href="/settings/llm">
               <Button>
                 <Key className="h-4 w-4" />
-                Please give your ChatGPT key here
+                Forneça aqui sua chave do ChatGPT
               </Button>
             </Link>
           )}
           <Link href="/settings">
             <Button variant="outline">
               <Banknote className="h-4 w-4" />
-              Default Currency: {settings.default_currency}
+              Moeda padrão: {settings.default_currency}
             </Button>
           </Link>
           <Link href="/settings/categories">
             <Button variant="outline">
               <ChartBarStacked className="h-4 w-4" />
-              Categories
+              Categorias
             </Button>
           </Link>
           <Link href="/settings/projects">
             <Button variant="outline">
               <FolderOpenDot className="h-4 w-4" />
-              Projects
+              Projetos
             </Button>
           </Link>
           <Link href="/settings/fields">
             <Button variant="outline">
               <TextCursorInput className="h-4 w-4" />
-              Custom Fields
+              Campos personalizados
             </Button>
           </Link>
         </div>

@@ -26,13 +26,13 @@ export async function uploadFilesAction(formData: FormData): Promise<ActionState
   // Check limits
   const totalFileSize = files.reduce((acc, file) => acc + file.size, 0)
   if (!isEnoughStorageToUploadFile(user, totalFileSize)) {
-    return { success: false, error: `Insufficient storage to upload these files` }
+    return { success: false, error: "Armazenamento insuficiente para enviar estes arquivos" }
   }
 
   if (isSubscriptionExpired(user)) {
     return {
       success: false,
-      error: "Your subscription has expired, please upgrade your account or buy new subscription plan",
+      error: "Sua assinatura expirou. Atualize sua conta ou adquira um novo plano.",
     }
   }
 
@@ -40,7 +40,7 @@ export async function uploadFilesAction(formData: FormData): Promise<ActionState
   const uploadedFiles = await Promise.all(
     files.map(async (file) => {
       if (!(file instanceof File)) {
-        return { success: false, error: "Invalid file" }
+          return { success: false, error: "Arquivo inválido" }
       }
 
       // Save file to filesystem

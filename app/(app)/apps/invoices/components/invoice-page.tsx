@@ -91,7 +91,7 @@ const ItemRow = memo(function ItemRow({
             value={item.name}
             onChange={(e) => onChange(index, "name", e.target.value)}
             className="w-full min-w-0 font-semibold"
-            placeholder="Item name"
+            placeholder="Nome do item"
             required
           />
           <div>
@@ -101,7 +101,7 @@ const ItemRow = memo(function ItemRow({
                 className="text-xs text-gray-400 hover:text-gray-800 mt-1 ml-1"
                 onClick={() => onChange(index, "showSubtitle", true)}
               >
-                + Add Description
+                + Adicionar descrição
               </button>
             ) : (
               <FormInput
@@ -109,7 +109,7 @@ const ItemRow = memo(function ItemRow({
                 value={item.subtitle}
                 onChange={(e) => onChange(index, "subtitle", e.target.value)}
                 className="w-full mt-1 text-xs text-muted-foreground"
-                placeholder="Detailed description (optional)"
+                placeholder="Descrição detalhada (opcional)"
               />
             )}
           </div>
@@ -118,8 +118,8 @@ const ItemRow = memo(function ItemRow({
 
       {/* Mobile labels for small screens */}
       <div className="grid grid-cols-3 gap-2 mt-2 sm:hidden">
-        <div className="text-xs font-medium text-gray-500 uppercase">Quantity</div>
-        <div className="text-xs font-medium text-gray-500 uppercase">Unit Price</div>
+        <div className="text-xs font-medium text-gray-500 uppercase">Quantidade</div>
+        <div className="text-xs font-medium text-gray-500 uppercase">Preço unitário</div>
         <div className="text-xs font-medium text-gray-500 uppercase">Subtotal</div>
       </div>
 
@@ -182,7 +182,7 @@ const TaxRow = memo(function TaxRow({
           type="text"
           value={tax.name}
           onChange={(e) => onChange(index, "name", e.target.value)}
-          placeholder="Tax name"
+          placeholder="Nome do imposto"
         />
         <FormInput
           type="number"
@@ -222,7 +222,7 @@ const FeeRow = memo(function FeeRow({
           type="text"
           value={fee.name}
           onChange={(e) => onChange(index, "name", e.target.value)}
-          placeholder="Fee or discount name"
+          placeholder="Nome da taxa ou do desconto"
         />
         <FormInput
           type="number"
@@ -289,11 +289,11 @@ export function InvoicePage({ invoiceData, dispatch, currencies }: InvoicePagePr
             value={invoiceData.title}
             onChange={(e) => dispatch({ type: "UPDATE_FIELD", field: "title", value: e.target.value })}
             className="text-2xl sm:text-4xl font-extrabold"
-            placeholder="INVOICE"
+            placeholder="FATURA"
             required
           />
           <FormInput
-            placeholder="Invoice ID or subtitle"
+            placeholder="ID da fatura ou subtítulo"
             value={invoiceData.invoiceNumber}
             onChange={(e) => dispatch({ type: "UPDATE_FIELD", field: "invoiceNumber", value: e.target.value })}
             className="w-full sm:w-[200px] font-medium"
@@ -331,7 +331,7 @@ export function InvoicePage({ invoiceData, dispatch, currencies }: InvoicePagePr
             value={invoiceData.companyDetails}
             onChange={(e) => dispatch({ type: "UPDATE_FIELD", field: "companyDetails", value: e.target.value })}
             rows={4}
-            placeholder="Your Company Name, Address, City, State, ZIP, Country, Tax ID"
+            placeholder="Nome da empresa, endereço, cidade, estado, CEP, país, CNPJ"
             required
           />
         </div>
@@ -346,7 +346,7 @@ export function InvoicePage({ invoiceData, dispatch, currencies }: InvoicePagePr
             value={invoiceData.billTo}
             onChange={(e) => dispatch({ type: "UPDATE_FIELD", field: "billTo", value: e.target.value })}
             rows={4}
-            placeholder="Client Name, Address, City, State, ZIP, Country, Tax ID"
+            placeholder="Nome do cliente, endereço, cidade, estado, CEP, país, CNPJ"
             required
           />
         </div>
@@ -450,7 +450,7 @@ export function InvoicePage({ invoiceData, dispatch, currencies }: InvoicePagePr
           </div>
 
           <Button onClick={addItem} className="m-2 sm:m-3 w-full sm:w-auto">
-            + Add Item
+            + Adicionar item
           </Button>
         </div>
       </div>
@@ -462,7 +462,7 @@ export function InvoicePage({ invoiceData, dispatch, currencies }: InvoicePagePr
           onChange={(e) => dispatch({ type: "UPDATE_FIELD", field: "notes", value: e.target.value })}
           className="w-full border border-gray-300 rounded p-2 text-xs sm:text-sm"
           rows={3}
-          placeholder="Additional notes or terms"
+          placeholder="Anotações ou condições adicionais"
         />
       </div>
 
@@ -494,7 +494,7 @@ export function InvoicePage({ invoiceData, dispatch, currencies }: InvoicePagePr
 
             <div className="w-full flex justify-end">
               <Button onClick={addAdditionalTax} className="w-full sm:w-auto">
-                + Add Tax
+                + Adicionar imposto
               </Button>
             </div>
 
@@ -511,7 +511,7 @@ export function InvoicePage({ invoiceData, dispatch, currencies }: InvoicePagePr
 
             <div className="w-full flex justify-end">
               <Button onClick={addAdditionalFee} className="w-full sm:w-auto">
-                + Add Fee or Discount
+                + Adicionar taxa ou desconto
               </Button>
             </div>
           </div>
@@ -523,7 +523,7 @@ export function InvoicePage({ invoiceData, dispatch, currencies }: InvoicePagePr
               onChange={(e) => dispatch({ type: "UPDATE_FIELD", field: "taxIncluded", value: e.target.checked })}
               className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
             />
-            <span className="text-gray-600 text-xs sm:text-sm">Taxes are included in price</span>
+            <span className="text-gray-600 text-xs sm:text-sm">Os impostos estão incluídos no preço</span>
           </label>
           <div className="flex justify-between border-t pt-2">
             <ShadyFormInput
@@ -546,7 +546,7 @@ export function InvoicePage({ invoiceData, dispatch, currencies }: InvoicePagePr
           onChange={(e) => dispatch({ type: "UPDATE_FIELD", field: "bankDetails", value: e.target.value })}
           className="text-center text-xs sm:text-sm text-muted-foreground w-full mx-auto border border-gray-300 rounded p-2"
           rows={3}
-          placeholder="Bank and Payment Details: Account number, Bank name, IBAN, SWIFT/BIC, Your Email (optional)"
+          placeholder="Dados bancários e de pagamento: número da conta, nome do banco, IBAN, SWIFT/BIC, seu e-mail (opcional)"
           required
         />
       </div>

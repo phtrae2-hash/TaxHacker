@@ -81,20 +81,22 @@ export function ExportTransactionsDialog({
       </DialogTrigger>
       <DialogContent className="max-w-xl">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">Export {total} Transactions</DialogTitle>
-          <DialogDescription>Export selected transactions and files as a CSV file or a ZIP archive</DialogDescription>
+          <DialogTitle className="text-2xl font-bold">Exportar {total} transações</DialogTitle>
+          <DialogDescription>
+            Exportar as transações e os arquivos selecionados como um arquivo CSV ou como um arquivo ZIP
+          </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-4">
             {exportFilters.search && (
               <div className="flex flex-row items-center gap-2">
-                <span className="text-sm font-medium">Search query:</span>
+                <span className="text-sm font-medium">Consulta:</span>
                 <span className="text-sm">{exportFilters.search}</span>
               </div>
             )}
 
             <div className="flex flex-row items-center gap-2">
-              <span className="text-sm font-medium">Time range:</span>
+              <span className="text-sm font-medium">Período:</span>
 
               <DateRangePicker
                 defaultDate={{
@@ -114,30 +116,30 @@ export function ExportTransactionsDialog({
 
             <div className="flex flex-row items-center gap-2">
               <FormSelectCategory
-                title="Category"
+                title="Categoria"
                 name="category"
                 categories={categories}
                 value={exportFilters.categoryCode}
                 onValueChange={(value) => setExportFilters({ ...exportFilters, categoryCode: value })}
-                placeholder="All Categories"
-                emptyValue="All Categories"
+                placeholder="Todas as categorias"
+                emptyValue="Todas as categorias"
               />
 
               <FormSelectProject
-                title="Project"
+                title="Projeto"
                 name="project"
                 projects={projects}
                 value={exportFilters.projectCode}
                 onValueChange={(value) => setExportFilters({ ...exportFilters, projectCode: value })}
-                placeholder="All Projects"
-                emptyValue="All Projects"
+                placeholder="Todos os projetos"
+                emptyValue="Todos os projetos"
               />
             </div>
           </div>
 
           <Separator />
 
-          <div className="text-lg font-bold">Fields to be included in CSV</div>
+          <div className="text-lg font-bold">Campos incluídos no CSV</div>
 
           <div className="grid grid-cols-2 gap-2">
             {fields.map((field) => (
@@ -169,8 +171,8 @@ export function ExportTransactionsDialog({
                 onChange={(e) => setIncludeAttachments(e.target.checked)}
               />
               <span className="flex flex-col">
-                <span className="font-medium">Include attached files</span>
-                <span className="text-sm">(create a zip archive)</span>
+                <span className="font-medium">Incluir arquivos anexados</span>
+                <span className="text-sm">(criar um arquivo ZIP)</span>
               </span>
             </label>
           </div>
@@ -179,11 +181,11 @@ export function ExportTransactionsDialog({
           <Button type="button" onClick={handleSubmit} disabled={isLoading || isDownloading}>
             {isLoading
               ? progress?.current
-                ? `Archiving ${progress.current}/${progress.total} files`
-                : "Exporting..."
+                ? `Arquivando ${progress.current}/${progress.total} arquivos`
+                : "Exportando..."
               : isDownloading
-                ? "Archive is created. Downloading..."
-                : "Export Transactions"}
+                ? "O arquivo foi criado. Baixando..."
+                : "Exportar transações"}
           </Button>
         </DialogFooter>
       </DialogContent>

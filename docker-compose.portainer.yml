@@ -1,0 +1,72 @@
+# Stack para Portainer - TaxHacker em tax.lojabb.com.br
+# Rede: portainerRede (criar no Portainer se não existir)
+# Ajuste BETTER_AUTH_SECRET e senhas antes de subir
+
+version: '3.8'
+
+services:
+  taxhacker:
+    build: .
+    image: taxhacker:latest
+    networks:
+      - portainerRede
+    environment:
+      - NODE_ENV=production
+      - PORT=7331
+      - BASE_URL=https://tax.lojabb.com.br
+      - SELF_HOSTED_MODE=true
+      - DISABLE_SIGNUP=true
+      - UPLOAD_PATH=/app/data/uploads
+      - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD:-AltereEstaSenha123!}@postgres:5432/taxhacker
+      - BETTER_AUTH_SECRET=${BETTER_AUTH_SECRET:-gere-com-openssl-rand-base64-32}
+      # Opcional: chaves de IA
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENAI_MODEL_NAME=${OPENAI_MODEL_NAME:-gpt-4o-mini}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY:-}
+    volumes:
+      - taxhacker_uploads:/app/data
+    depends_on:
+      - postgres
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+      labels:
+        - traefik.enable=1
+        - traefik.http.routers.taxhacker.rule=Host(`tax.lojabb.com.br`)
+        - traefik.http.routers.taxhacker.entrypoints=websecure
+        - traefik.http.routers.taxhacker.tls.certresolver=letsencryptresolver
+        - traefik.http.services.taxhacker.loadbalancer.server.port=7331
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:17-alpine
+    networks:
+      - portainerRede
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-AltereEstaSenha123!}
+      - POSTGRES_DB=taxhacker
+    volumes:
+      - taxhacker_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+    restart: unless-stopped
+
+volumes:
+  taxhacker_uploads:
+  taxhacker_pgdata:
+
+networks:
+  portainerRede:
+    external: true

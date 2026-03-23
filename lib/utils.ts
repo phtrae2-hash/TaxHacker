@@ -3,7 +3,7 @@ import slugify from "slugify"
 import { twMerge } from "tailwind-merge"
 import { violet, tomato, red, crimson, pink, plum, purple, indigo, blue, sky, cyan, teal, mint, grass, lime, yellow, amber, orange, brown } from "@radix-ui/colors"
 
-const LOCALE = "en-US"
+const LOCALE = "pt-BR"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -142,7 +142,7 @@ export function generateUUID(): string {
 export function formatPeriodLabel(period: string, date: Date): string {
   if (period.includes("-") && period.split("-").length === 3) {
     // Daily format: show day/month/year
-    return date.toLocaleDateString("en-US", {
+    return date.toLocaleDateString("pt-BR", {
       weekday: "short",
       month: "short",
       day: "numeric",
@@ -150,7 +150,7 @@ export function formatPeriodLabel(period: string, date: Date): string {
     })
   } else {
     // Monthly format: show month/year with short month name
-    return date.toLocaleDateString("en-US", {
+    return date.toLocaleDateString("pt-BR", {
       month: "short",
       year: "numeric",
     })

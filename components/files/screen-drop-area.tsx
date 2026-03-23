@@ -88,11 +88,11 @@ export default function ScreenDropArea({ children }: { children: React.ReactNode
               router.push("/unsorted")
             }
           } else {
-            setUploadError(result.error ? result.error : "Something went wrong...")
+            setUploadError(result.error ? result.error : "Ocorreu um erro ao enviar. Tente novamente.")
           }
         } catch (error) {
           console.error("Upload error:", error)
-          setUploadError(error instanceof Error ? error.message : "Something went wrong...")
+          setUploadError(error instanceof Error ? error.message : "Ocorreu um erro ao enviar. Tente novamente.")
         } finally {
           setIsUploading(false)
         }
@@ -131,9 +131,11 @@ export default function ScreenDropArea({ children }: { children: React.ReactNode
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-xl text-center">
             <CloudUpload className="h-16 w-16 mx-auto mb-4 text-primary" />
             <h3 className="text-xl font-semibold mb-2">
-              {transactionId ? "Drop Files to Add to Transaction" : "Drop Files to Upload"}
+              {transactionId
+                ? "Solte os arquivos para adicionar à transação"
+                : "Solte os arquivos para enviar"}
             </h3>
-            <p className="text-gray-600 dark:text-gray-400">Drop anywhere on the screen</p>
+            <p className="text-gray-600 dark:text-gray-400">Solte em qualquer lugar da tela</p>
           </div>
         </div>
       )}
@@ -143,7 +145,7 @@ export default function ScreenDropArea({ children }: { children: React.ReactNode
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-xl text-center">
             <Loader2 className="h-16 w-16 mx-auto mb-4 text-primary animate-spin" />
             <h3 className="text-xl font-semibold mb-2">
-              {transactionId ? "Adding files to transaction..." : "Uploading..."}
+              {transactionId ? "Adicionando arquivos à transação..." : "Enviando..."}
             </h3>
           </div>
         </div>
@@ -153,7 +155,7 @@ export default function ScreenDropArea({ children }: { children: React.ReactNode
         <div className="fixed inset-0 bg-opacity-20 backdrop-blur-sm z-50 flex items-center justify-center">
           <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-xl text-center">
             <AlertCircle className="h-16 w-16 mx-auto mb-4 text-red-500" />
-            <h3 className="text-xl font-semibold mb-2">Upload Error</h3>
+              <h3 className="text-xl font-semibold mb-2">Erro no envio</h3>
             <p className="text-gray-600 dark:text-gray-400">{uploadError}</p>
           </div>
         </div>

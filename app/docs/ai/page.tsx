@@ -3,45 +3,47 @@ import config from "@/lib/config"
 export default async function AI() {
   return (
     <div className="prose prose-slate max-w-none">
-      <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">AI Use Disclosure</h1>
+      <h1 className="text-3xl font-bold tracking-tight text-gray-900 mb-6">Aviso de Uso de IA</h1>
 
       <p className="bg-slate-50 p-4 rounded-lg border border-slate-200 mb-6">
-        <strong className="text-slate-700">Effective Date</strong>: April 22, 2025
+        <strong className="text-slate-700">Data de Vigência</strong>: 22 de abril de 2025
         <br />
-        <strong className="text-slate-700">Contact Email</strong>:{" "}
+        <strong className="text-slate-700">E-mail de Contato</strong>:{" "}
         <a href={`mailto:${config.app.supportEmail}`} className="text-blue-600 hover:text-blue-800">
           {config.app.supportEmail}
         </a>
         <br />
-        <strong className="text-slate-700">Domain</strong>:{" "}
+        <strong className="text-slate-700">Domínio</strong>:{" "}
         <a href="https://taxhacker.app" className="text-blue-600 hover:text-blue-800">
           https://taxhacker.app
         </a>
       </p>
 
       <p className="text-gray-700 leading-relaxed mb-6">
-        At TaxHacker, we use artificial intelligence (&quot;AI&quot;) to power the core features of our platform. This
-        document outlines how and why we use AI technologies, what data is processed, and how it may affect you as a
-        user.
+        Na TaxHacker, utilizamos inteligência artificial (&quot;IA&quot;) para viabilizar as funcionalidades centrais da nossa
+        plataforma. Este documento descreve como e por que utilizamos tecnologias de IA, quais dados são processados e como
+        isso pode afetar você, como usuário.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">1. Purpose of AI in TaxHacker</h2>
-      <p className="text-gray-700 leading-relaxed mb-3">AI is essential to the TaxHacker experience. It is used for:</p>
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">1. Finalidade da IA na TaxHacker</h2>
+      <p className="text-gray-700 leading-relaxed mb-3">
+        A IA é essencial para a experiência na TaxHacker. Ela é utilizada para:
+      </p>
       <ul className="list-disc pl-6 space-y-2 mb-6 text-gray-700">
-        <li>Optical Character Recognition (OCR) of scanned invoices and receipts</li>
-        <li>Automatic categorization and tagging of financial transactions</li>
-        <li>Summarization of expenses and vendor descriptions</li>
-        <li>Smart field population and autofill within forms</li>
-        <li>Custom prompt-driven workflows</li>
+        <li>Reconhecimento ótico de caracteres (OCR) de faturas e recibos digitalizados</li>
+        <li>Categorização automática e marcação de transações financeiras</li>
+        <li>Resumo de despesas e descrições de fornecedores</li>
+        <li>Preenchimento inteligente de campos e autofill em formulários</li>
+        <li>Fluxos de trabalho personalizados orientados por prompts</li>
       </ul>
       <p className="text-gray-700 leading-relaxed mb-6">
-        All AI-generated content is visible directly in the user interface and may be applied to your transactions,
-        projects, and reports.
+        Todo o conteúdo gerado por IA é exibido diretamente na interface do usuário e pode ser aplicado às suas
+        transações, projetos e relatórios.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">2. AI Providers and Models</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">2. Provedores e Modelos de IA</h2>
       <p className="text-gray-700 leading-relaxed mb-3">
-        Our cloud-hosted version uses models provided by <strong>OpenAI</strong>, including:
+        Nossa versão hospedada na nuvem utiliza modelos fornecidos por <strong>OpenAI</strong>, incluindo:
       </p>
       <ul className="list-disc pl-6 space-y-2 mb-6 text-gray-700">
         <li>
@@ -49,64 +51,66 @@ export default async function AI() {
         </li>
       </ul>
       <p className="text-gray-700 leading-relaxed mb-6">
-        In the <strong>self-hosted version</strong>, users may choose to connect their own language models or AI
-        backends. We do not monitor or vet these setups and assume no responsibility for their output.
+        Na <strong>versão auto-hospedada</strong>, os usuários podem optar por conectar seus próprios modelos de linguagem
+        ou backends de IA. Não monitoramos nem avaliamos essas configurações e não assumimos responsabilidade pelo resultado
+        obtido.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">3. Data Sent for AI Processing</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">3. Dados Enviados para Processamento de IA</h2>
       <p className="text-gray-700 leading-relaxed mb-3">
-        To deliver AI-powered features, we send selected user data to OpenAI&apos;s API, including:
+        Para disponibilizar funcionalidades baseadas em IA, enviamos dados selecionados do usuário para a API da OpenAI,
+        incluindo:
       </p>
       <ul className="list-disc pl-6 space-y-2 mb-6 text-gray-700">
-        <li>Uploaded documents (e.g., receipts, invoices)</li>
-        <li>Associated transaction metadata and user-provided fields</li>
-        <li>Historical context of past transactions (if required for analysis)</li>
+        <li>Documentos enviados (por exemplo: recibos, faturas)</li>
+        <li>Metadados associados às transações e campos fornecidos pelo usuário</li>
+        <li>Contexto histórico de transações anteriores (se necessário para a análise)</li>
       </ul>
       <p className="bg-amber-50 p-4 rounded-lg border border-amber-200 mb-4">
-        <strong className="text-amber-600">⚠️ Note:</strong> This data is <strong>not anonymized or redacted</strong>{" "}
-        before transmission. By using TaxHacker, you acknowledge and consent to this transfer.
+        <strong className="text-amber-600">⚠️ Observação:</strong> esses dados <strong>não são anonimizados nem mascarados</strong>{" "}
+        antes do envio. Ao utilizar a TaxHacker, você reconhece e consente com essa transferência.
       </p>
       <p className="text-gray-700 leading-relaxed mb-6">
-        We store <strong>structured outputs</strong> from the AI (e.g., parsed fields, categorization) in your account
-        for future use. We do <strong>not</strong> store raw AI prompts or responses beyond what's necessary to populate
-        your data.
+        Armazenamos <strong>saídas estruturadas</strong> geradas pela IA (por exemplo: campos extraídos, categorização) na sua conta
+        para uso futuro. Nós <strong>não</strong> armazenamos prompts ou respostas brutas da IA além do que for necessário para
+        preencher seus dados.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">4. Human Involvement</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">4. Participação Humana</h2>
       <p className="text-gray-700 leading-relaxed mb-4">
-        We do <strong>not</strong> manually review AI-generated content. There is currently no mechanism for human
-        review, error flagging, or corrections.
+        Nós <strong>não</strong> revisamos manualmente o conteúdo gerado por IA. No momento, não há mecanismo para revisão
+        humana, sinalização de erros ou correções.
       </p>
       <p className="text-gray-700 leading-relaxed mb-6">
-        Users are solely responsible for verifying the accuracy of AI-processed outputs before using them for financial
-        or reporting purposes.
+        Os usuários são exclusivamente responsáveis por verificar a exatidão das saídas processadas por IA antes de utilizá-las
+        para fins financeiros ou de relatórios.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">5. Opt-Out and Core Dependency</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">5. Desativação voluntária e dependência essencial</h2>
       <p className="text-gray-700 leading-relaxed mb-6">
-        AI processing is a fundamental component of TaxHacker and cannot be disabled. If you do not consent to your data
-        being processed via AI, you should not use the platform.
+        O processamento por IA é um componente fundamental da TaxHacker e não pode ser desativado. Se você não concorda com o
+        processamento de seus dados por IA, não deve utilizar a plataforma.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">6. Automated Decision-Making</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">6. Tomada de Decisão Automatizada</h2>
       <p className="text-gray-700 leading-relaxed mb-4">
-        Our AI systems do not make binding legal or financial decisions on your behalf. However, they may suggest
-        categories, values, or summaries based on the data you provide.
+        Nossos sistemas de IA não tomam decisões legais ou financeiras vinculantes em seu nome. No entanto, eles podem sugerir
+        categorias, valores ou resumos com base nos dados que você fornece.
       </p>
       <p className="text-gray-700 leading-relaxed mb-6">
-        While these outputs may influence how your data is structured or interpreted, they are{" "}
-        <strong>not used to make automated decisions with legal or significant effects</strong> as defined under GDPR
-        Article 22.
+        Embora essas saídas possam influenciar a forma como seus dados são estruturados ou interpretados, elas{" "}
+        <strong>não são utilizadas para tomar decisões automatizadas com efeitos legais ou de grande relevância</strong>, conforme
+        definido no Artigo 22 do GDPR.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">7. Risks and Limitations</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">7. Riscos e Limitações</h2>
       <p className="text-gray-700 leading-relaxed mb-4">
-        AI-generated outputs are probabilistic and may contain errors, omissions, or misinterpretations. We make{" "}
-        <strong>no guarantees of accuracy</strong>, completeness, or suitability for tax, legal, or financial purposes.
+        As saídas geradas por IA são probabilísticas e podem conter erros, omissões ou interpretações incorretas. Nós não{" "}
+        <strong>oferecemos garantias de exatidão</strong>, completude ou adequação para fins tributários, legais ou financeiros.
       </p>
       <p className="bg-red-50 p-4 rounded-lg border border-red-200 mb-6">
-        <strong className="text-red-600">⚠️ Important:</strong> TaxHacker is <strong>not a substitute</strong> for a
-        certified accountant, tax advisor, or legal counsel. Use at your own risk.
+        <strong className="text-red-600">⚠️ Importante:</strong> a TaxHacker <strong>não é um substituto</strong> para um
+        contador certificado, consultor tributário ou advogado. Utilize por sua conta e risco.
       </p>
     </div>
   )

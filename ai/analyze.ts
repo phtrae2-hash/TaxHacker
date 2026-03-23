@@ -51,7 +51,7 @@ export async function analyzeTransaction(
     console.error("AI Analysis error:", error)
     return {
       success: false,
-      error: error instanceof Error ? error.message : "Failed to analyze invoice",
+      error: error instanceof Error ? error.message : "Falha ao analisar o arquivo",
     }
   }
 }
