@@ -1,0 +1,67 @@
+version: '3.7'
+
+services:
+  taxhacker:
+    image: ghcr.io/vas3k/taxhacker:latest
+    networks:
+      - portainerRede
+
+    environment:
+      # Core
+      - SELF_HOSTED_MODE=true
+      - PORT=7331
+      - BASE_URL=https://tax.lojabb.com.br
+
+      # Storage
+      - UPLOAD_PATH=/app/data/uploads
+
+      # Database (CORRIGIDO: @ → %40)
+      - DATABASE_URL=postgresql://postgres:91753437%40N8n@tax_postgres:5432/taxhacker
+
+      # Auth (troque depois)
+      - BETTER_AUTH_SECRET=troque_essa_chave_por_uma_segura_123456789
+
+      # LLM (OBRIGATÓRIO)
+      - OPENAI_API_KEY=COLOQUE_SUA_KEY_AQUI
+
+    volumes:
+      - tax_data:/app/data
+
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+      labels:
+        - traefik.enable=1
+        - traefik.http.routers.tax.rule=Host(`tax.lojabb.com.br`)
+        - traefik.http.routers.tax.entrypoints=websecure
+        - traefik.http.routers.tax.tls.certresolver=letsencryptresolver
+        - traefik.http.services.tax.loadbalancer.server.port=7331
+
+  tax_postgres:
+    image: postgres:17
+    networks:
+      - portainerRede
+
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=91753437@N8n
+      - POSTGRES_DB=taxhacker
+
+    volumes:
+      - tax_pg_data:/var/lib/postgresql/data
+
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+
+volumes:
+  tax_data:
+  tax_pg_data:
+
+networks:
+  portainerRede:
+    external: true
