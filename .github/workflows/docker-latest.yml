@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:  # permite rodar manualmente em Actions > Run workflow
 
 jobs:
   build-and-push:

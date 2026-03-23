@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   taxhacker:
-    # Imagem pt-BR do seu fork (build automático via GitHub Actions no push)
+    # Imagem pt-BR: rode o workflow em GitHub Actions ANTES de criar o stack
     image: ghcr.io/phtrae2-hash/taxhacker:latest
     networks:
       - portainerRede
