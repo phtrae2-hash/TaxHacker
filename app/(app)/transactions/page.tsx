@@ -72,7 +72,7 @@ export default async function TransactionsPage({ searchParams }: { searchParams:
                 <Upload /> Analisar nova fatura
               </UploadButton>
               <NewTransactionDialog>
-                <Button variant="outline">
+                <Button variant="ghost">
                   <Plus />
                   Adicionar manualmente
                 </Button>

@@ -8,8 +8,8 @@ export default async function Terms() {
         <strong className="text-slate-700">Data de Vigência:</strong> 22 de abril de 2025
         <br />
         <strong className="text-slate-700">Serviço:</strong>{" "}
-        <a href="https://taxhacker.app" className="text-blue-600 hover:text-blue-800">
-          https://taxhacker.app
+        <a href="https://AutomateContábil.app" className="text-blue-600 hover:text-blue-800">
+          https://AutomateContábil.app
         </a>
         <br />
         <strong className="text-slate-700">Contato:</strong>{" "}
@@ -19,13 +19,13 @@ export default async function Terms() {
       </p>
 
       <p className="text-slate-700 mb-6 leading-relaxed">
-        Estes Termos de Serviço (&quot;Termos&quot;) regem seu acesso e uso do TaxHacker, um analisador automático
+        Estes Termos de Serviço (&quot;Termos&quot;) regem seu acesso e uso do AutomateContábil, um analisador automático
         de faturas e rastreador de despesas impulsionado por inteligência artificial (IA). Ao acessar ou utilizar
         nossos serviços, você concorda em se vincular a estes Termos.
       </p>
 
       <h2 className="text-2xl font-semibold text-slate-800 mb-4">1. Visão Geral do Serviço</h2>
-      <p className="text-slate-700 mb-3">A TaxHacker oferece:</p>
+      <p className="text-slate-700 mb-3">A AutomateContábil oferece:</p>
       <ul className="list-disc pl-6 mb-6 space-y-2 text-slate-700">
         <li>
           Uma <strong className="text-slate-800">plataforma baseada em nuvem</strong> com planos pagos
@@ -46,7 +46,7 @@ export default async function Terms() {
       <ul className="list-disc pl-6 mb-6 space-y-2 text-slate-700">
         <li>
           Você deve ter pelo menos <strong className="text-slate-800">18 anos de idade</strong> para usar o
-          TaxHacker.
+          AutomateContábil.
         </li>
         <li>
           Você pode registrar e manter <strong className="text-slate-800">múltiplas contas</strong>.
@@ -92,7 +92,7 @@ export default async function Terms() {
       <h2 className="text-2xl font-semibold text-slate-800 mb-4">5. Uso de IA e Integrações de Terceiros</h2>
       <ul className="list-disc pl-6 mb-6 space-y-2 text-slate-700">
         <li>
-          O TaxHacker utiliza <strong className="text-slate-800">OpenAI (ChatGPT)</strong> e outras APIs de terceiros para
+          O AutomateContábil utiliza <strong className="text-slate-800">OpenAI (ChatGPT)</strong> e outras APIs de terceiros para
           processar e analisar documentos.
         </li>
         <li>
@@ -112,7 +112,7 @@ export default async function Terms() {
           resultante.
         </li>
         <li>
-          O TaxHacker <strong className="text-slate-800">não reivindica quaisquer direitos</strong> sobre seus dados.
+          O AutomateContábil <strong className="text-slate-800">não reivindica quaisquer direitos</strong> sobre seus dados.
         </li>
         <li>
           Você tem liberdade para <strong className="text-slate-800">reutilizar, baixar, publicar ou exportar</strong> qualquer
@@ -123,7 +123,7 @@ export default async function Terms() {
       <h2 className="text-2xl font-semibold text-slate-800 mb-4">7. Limitações de Responsabilidade</h2>
       <ul className="list-disc pl-6 mb-6 space-y-2 text-slate-700">
         <li>
-          O TaxHacker é fornecido <strong className="text-slate-800">&quot;no estado em que se encontra&quot;</strong>, sem
+          O AutomateContábil é fornecido <strong className="text-slate-800">&quot;no estado em que se encontra&quot;</strong>, sem
           garantias de qualquer tipo.
         </li>
         <li>
@@ -131,7 +131,7 @@ export default async function Terms() {
           nem quanto à adequação dos nossos serviços para fins contábeis, de declaração de impostos ou de conformidade.
         </li>
         <li className="bg-yellow-50 p-3 border-l-4 border-yellow-400">
-          <strong className="text-slate-800">⚠️ Important:</strong> TaxHacker is{" "}
+          <strong className="text-slate-800">⚠️ Important:</strong> AutomateContábil is{" "}
           <strong className="text-slate-800">não é um substituto</strong> para aconselhamento tributário ou jurídico profissional.
           Você utiliza o serviço <strong className="text-slate-800">por sua conta e risco</strong>.
         </li>

@@ -8,8 +8,8 @@ export default async function Cookie() {
         <strong className="text-slate-700">Data de Vigência:</strong> 22 de abril de 2025
         <br />
         <strong className="text-slate-700">Serviço:</strong>{" "}
-        <a href="https://taxhacker.app" className="text-blue-600 hover:text-blue-800">
-          https://taxhacker.app
+        <a href="https://AutomateContábil.app" className="text-blue-600 hover:text-blue-800">
+          https://AutomateContábil.app
         </a>
         <br />
         <strong className="text-slate-700">Contato:</strong>{" "}
@@ -19,7 +19,7 @@ export default async function Cookie() {
       </p>
 
       <p className="text-slate-700 mb-6 leading-relaxed">
-        Esta Política de Cookies explica como a TaxHacker utiliza cookies e tecnologias semelhantes quando você visita
+        Esta Política de Cookies explica como a AutomateContábil utiliza cookies e tecnologias semelhantes quando você visita
         nosso site ou utiliza nossos serviços.
       </p>
 

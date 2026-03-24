@@ -114,7 +114,7 @@ export default function LLMSettingsForm({
       <Card className="flex flex-col gap-4 p-4 bg-accent mt-20">
         <CardTitle className="flex flex-row justify-between items-center gap-2">
           <span className="text-md font-medium">
-            Current JSON Schema for{" "}
+            JSON atual para {" "}
             <a
               href="https://platform.openai.com/docs/guides/structured-outputs?api-mode=responses&lang=javascript"
               target="_blank"

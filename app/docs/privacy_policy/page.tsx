@@ -22,17 +22,17 @@ export default async function PrivacyPolicy() {
         </a>
         <br />
         <strong className="text-slate-700">Domínio</strong>:{" "}
-        <a href="https://taxhacker.app" className="text-blue-600 hover:text-blue-800">
-          https://taxhacker.app
+        <a href="https://AutomateContábil.app" className="text-blue-600 hover:text-blue-800">
+          https://AutomateContábil.app
         </a>
       </p>
 
       <p className="text-slate-700 mb-6 leading-relaxed">
-        A TaxHacker (&quot;nós&quot;, &quot;nosso&quot;, &quot;nossa&quot;) está comprometida em proteger sua privacidade. Esta
+        A AutomateContábil (&quot;nós&quot;, &quot;nosso&quot;, &quot;nossa&quot;) está comprometida em proteger sua privacidade. Esta
         Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos seus dados pessoais quando você
         utiliza nossos serviços em{" "}
-        <a href="https://taxhacker.app" className="text-blue-600 hover:text-blue-800">
-          taxhacker.app
+        <a href="https://AutomateContábil.app" className="text-blue-600 hover:text-blue-800">
+          AutomateContábil.app
         </a>
         .
       </p>
@@ -43,7 +43,7 @@ export default async function PrivacyPolicy() {
         1. <strong>Quais Dados Nós Coletamos</strong>
       </h3>
       <p className="text-slate-700 mb-3">
-        Coletamos os seguintes tipos de dados quando você utiliza a TaxHacker:
+        Coletamos os seguintes tipos de dados quando você utiliza a AutomateContábil:
       </p>
       <ul className="list-disc pl-6 mb-6 space-y-2 text-slate-700">
         <li>
@@ -75,7 +75,7 @@ export default async function PrivacyPolicy() {
       </h3>
       <p className="text-slate-700 mb-3">Usamos seus dados para:</p>
       <ul className="list-disc pl-6 mb-6 space-y-2 text-slate-700">
-        <li>Criar e gerenciar sua conta na TaxHacker</li>
+        <li>Criar e gerenciar sua conta na AutomateContábil</li>
         <li>Armazenar e analisar os arquivos enviados</li>
         <li>Melhorar sua organização financeira com insights baseados em IA</li>
         <li>Comunicar você sobre sua conta e atualizações do serviço</li>
@@ -96,7 +96,7 @@ export default async function PrivacyPolicy() {
       </ul>
 
       <p className="text-slate-700 mb-6 leading-relaxed">
-        Ao utilizar a TaxHacker, você concorda com a transferência dos dados relevantes para esses provedores terceiros
+        Ao utilizar a AutomateContábil, você concorda com a transferência dos dados relevantes para esses provedores terceiros
         para fins de processamento. Esses provedores podem operar fora da UE, em conformidade com salvaguardas
         apropriadas sob o GDPR (por exemplo, SCCs).
       </p>
@@ -107,7 +107,7 @@ export default async function PrivacyPolicy() {
         4. <strong>Cookies e Rastreamento</strong>
       </h3>
       <p className="text-slate-700 mb-6 leading-relaxed">
-        A TaxHacker <strong className="text-slate-800">não utiliza cookies de rastreamento</strong> nem analytics de terceiros.
+        A AutomateContábil <strong className="text-slate-800">não utiliza cookies de rastreamento</strong> nem analytics de terceiros.
         Coletamos apenas logs agregados de acesso e estatísticas de uso via <strong className="text-slate-800">Cloudflare</strong>,
         para desempenho e segurança da infraestrutura.
       </p>
@@ -196,7 +196,7 @@ export default async function PrivacyPolicy() {
         9. <strong>Privacidade de Menores</strong>
       </h3>
       <p className="text-slate-700 mb-6 leading-relaxed">
-        A TaxHacker <strong className="text-slate-800">não se destina a usuários menores de 18 anos</strong>. Não coletamos nem
+        A AutomateContábil <strong className="text-slate-800">não se destina a usuários menores de 18 anos</strong>. Não coletamos nem
         armazenamos dados de menores de forma consciente.
       </p>
 

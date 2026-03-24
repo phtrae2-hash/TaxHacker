@@ -77,7 +77,7 @@ export default function TransactionCreateForm({
       {formData.currencyCode !== settings.default_currency ? (
         <div className="flex flex-row gap-4">
           <FormInput
-            title={`Convertido para ${settings.default_currency}`}
+            title={`Valor convertido (${settings.default_currency})`}
             type="number"
             step="0.01"
             name="convertedTotal"

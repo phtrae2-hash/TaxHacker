@@ -118,7 +118,7 @@ export const standardFieldRenderers: Record<string, FieldRenderer> = {
       return (
         <div className="flex flex-col gap-3 text-right">
           <dl className="space-y-1">
-            <dt className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Net Total</dt>
+            <dt className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Total líquido</dt>
             {Object.entries(netTotalPerCurrency).map(([currency, total]) => (
               <dd
                 key={`net-${currency}`}
@@ -129,7 +129,7 @@ export const standardFieldRenderers: Record<string, FieldRenderer> = {
             ))}
           </dl>
           <dl className="space-y-1">
-            <dt className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Turnover</dt>
+            <dt className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">Volume de negócios</dt>
             {Object.entries(turnoverPerCurrency).map(([currency, total]) => (
               <dd key={`turnover-${currency}`} className="text-sm text-muted-foreground">
                 {formatCurrency(total, currency)}

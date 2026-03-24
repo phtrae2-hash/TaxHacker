@@ -1,58 +1,58 @@
 import { prisma } from "@/lib/db"
 
-export const DEFAULT_PROMPT_ANALYSE_NEW_FILE = `You are an accountant and invoice analysis assistant. Extract following information from the given invoice: 
+export const DEFAULT_PROMPT_ANALYSE_NEW_FILE = `Você é um contador e assistente de análise de faturas. Extraia as seguintes informações da fatura fornecida: 
 
 {fields}
 
-Also try to extract "items": all separate products or items from the invoice
+Também tente extrair "items": todos os produtos ou itens separados da fatura
 
-Where categories are:
+Onde as categorias são:
 
 {categories}
 
-And projects are:
+E os projetos são:
 
 {projects}
 
-IMPORTANT RULES:
-- Do not include any other text in your response!
-- If you can't find something leave it blank, NEVER make up information
-- Return only one object`
+REGRAS IMPORTANTES:
+- Não inclua nenhum outro texto na sua resposta!
+- Se não encontrar algo, deixe em branco, NUNCA invente informações
+- Retorne apenas um único objeto`
 
 export const DEFAULT_SETTINGS = [
   {
     code: "default_currency",
-    name: "Default Currency",
-    description: "Don't change this setting if you already have multi-currency transactions. I won't recalculate them.",
+    name: "Moeda Padrão",
+    description: "Não altere esta configuração se você já possui transações em múltiplas moedas. Eu não vou recalculá-las.",
     value: "EUR",
   },
   {
     code: "default_category",
-    name: "Default Category",
+    name: "Categoria Padrão",
     description: "",
     value: "other",
   },
   {
     code: "default_project",
-    name: "Default Project",
+    name: "Projeto Padrão",
     description: "",
     value: "personal",
   },
   {
     code: "default_type",
-    name: "Default Type",
+    name: "Tipo Padrão",
     description: "",
     value: "expense",
   },
   {
     code: "prompt_analyse_new_file",
-    name: "Prompt for Analyze Transaction",
-    description: "Allowed variables: {fields}, {categories}, {categories.code}, {projects}, {projects.code}",
+    name: "Prompt para Analisar Transação",
+    description: "Variáveis permitidas: {fields}, {categories}, {categories.code}, {projects}, {projects.code}",
     value: DEFAULT_PROMPT_ANALYSE_NEW_FILE,
   },
   {
     code: "is_welcome_message_hidden",
-    name: "Do not show welcome message on dashboard",
+    name: "Não mostrar mensagem de boas-vindas no dashboard",
     description: "",
     value: "false",
   },
@@ -61,47 +61,51 @@ export const DEFAULT_SETTINGS = [
 export const DEFAULT_CATEGORIES = [
   {
     code: "ads",
-    name: "Advertisement",
+    name: "Publicidade",
     color: "#882727",
-    llm_prompt: "ads, promos, online ads, etc",
+    llm_prompt: "anúncios, promoções, anúncios online, etc",
   },
   {
     code: "swag",
-    name: "Swag and Goods",
+    name: "Brindes e Produtos",
     color: "#882727",
-    llm_prompt: "swag, stickers, goods, etc",
+    llm_prompt: "brindes, adesivos, produtos, etc",
   },
-  { code: "donations", name: "Gifts and Donations", color: "#1e6359", llm_prompt: "donations, gifts, charity" },
-  { code: "tools", name: "Equipment and Tools", color: "#c69713", llm_prompt: "equipment, tools" },
-  { code: "events", name: "Events and Conferences", color: "#ff8b32", llm_prompt: "events, conferences" },
-  { code: "food", name: "Food and Drinks", color: "#d40e70", llm_prompt: "food, drinks, business meals" },
-  { code: "insurance", name: "Insurance", color: "#050942", llm_prompt: "insurance, health, life" },
-  { code: "invoice", name: "Invoice", color: "#064e85", llm_prompt: "custom invoice, bill" },
-  { code: "communication", name: "Mobile and Internet", color: "#0e7d86", llm_prompt: "mobile, internet, phone" },
-  { code: "office", name: "Office Supplies", color: "#59b0b9", llm_prompt: "office, supplies, stationery" },
-  { code: "online", name: "Online Services", color: "#8753fb", llm_prompt: "online services, saas, subscriptions" },
-  { code: "rental", name: "Rental", color: "#050942", llm_prompt: "rental, lease" },
+  { code: "donations", name: "Presentes e Doações", color: "#1e6359", llm_prompt: "doações, presentes, caridade" },
+  { code: "tools", name: "Equipamentos e Ferramentas", color: "#c69713", llm_prompt: "equipamentos, ferramentas" },
+  { code: "events", name: "Eventos e Conferências", color: "#ff8b32", llm_prompt: "eventos, conferências" },
+  { code: "food", name: "Alimentação e Bebidas", color: "#d40e70", llm_prompt: "comida, bebidas, refeições de negócios" },
+  { code: "insurance", name: "Seguros", color: "#050942", llm_prompt: "seguros, saúde, vida" },
+  { code: "invoice", name: "Fatura", color: "#064e85", llm_prompt: "fatura personalizada, cobrança" },
+  { code: "communication", name: "Celular e Internet", color: "#0e7d86", llm_prompt: "celular, internet, telefone" },
+  { code: "office", name: "Material de Escritório", color: "#59b0b9", llm_prompt: "escritório, suprimentos, papelaria" },
+  { code: "online", name: "Serviços Online", color: "#8753fb", llm_prompt: "serviços online, saas, assinaturas" },
+  { code: "rental", name: "Aluguel", color: "#050942", llm_prompt: "aluguel, leasing" },
   {
     code: "education",
-    name: "Education",
+    name: "Educação",
     color: "#ee5d6c",
-    llm_prompt: "education, professional development, trainings",
+    llm_prompt: "educação, desenvolvimento profissional, treinamentos",
   },
-  { code: "salary", name: "Salary", color: "#ce4993", llm_prompt: "salary, wages, etc" },
-  { code: "fees", name: "Fees", color: "#6a0d83", llm_prompt: "fees, charges, penalties, etc" },
-  { code: "travel", name: "Travel Expenses", color: "#fb9062", llm_prompt: "travel, accommodation, etc" },
-  { code: "utility_bills", name: "Utility Bills", color: "#af7e2e", llm_prompt: "bills, electricity, water, etc" },
+  { code: "salary", name: "Salário", color: "#ce4993", llm_prompt: "salário, pagamentos, etc" },
+  { code: "fees", name: "Taxas",
+    color: "#6a0d83",
+    llm_prompt: "taxas, cobranças, penalidades, etc" },
+  { code: "travel", name: "Despesas de Viagem", color: "#fb9062", llm_prompt: "viagem, hospedagem, etc" },
+  { code: "utility_bills", name: "Contas de Serviços", color: "#af7e2e", llm_prompt: "contas, eletricidade, água, etc" },
   {
     code: "transport",
-    name: "Transport",
+    name: "Transporte",
     color: "#800000",
-    llm_prompt: "transportation costs, fuel, car rental, vignettes, etc",
+    llm_prompt: "custos de transporte, combustível, aluguel de carro, pedágios, etc",
   },
-  { code: "software", name: "Software", color: "#2b5a1d", llm_prompt: "software, licenses" },
-  { code: "other", name: "Other", color: "#121216", llm_prompt: "other, miscellaneous," },
+  { code: "software", name: "Software", color: "#2b5a1d", llm_prompt: "software, licenças" },
+  { code: "other", name: "Outros", color: "#121216", llm_prompt: "outros, diversos" },
 ]
 
-export const DEFAULT_PROJECTS = [{ code: "personal", name: "Personal", llm_prompt: "personal", color: "#1e202b" }]
+export const DEFAULT_PROJECTS = [
+  { code: "personal", name: "Pessoal", llm_prompt: "pessoal", color: "#1e202b" }
+]
 
 export const DEFAULT_CURRENCIES = [
   { code: "USD", name: "$" },
@@ -286,9 +290,9 @@ export const DEFAULT_CURRENCIES = [
 export const DEFAULT_FIELDS = [
   {
     code: "name",
-    name: "Name",
+    name: "Nome",
     type: "string",
-    llm_prompt: "human readable name, summarize what is bought or paid for in the invoice",
+    llm_prompt: "nome legível para humanos, resuma o que foi comprado ou pago na fatura",
     isVisibleInList: true,
     isVisibleInAnalysis: true,
     isRequired: true,
@@ -296,9 +300,9 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "description",
-    name: "Description",
+    name: "Descrição",
     type: "string",
-    llm_prompt: "description of the transaction",
+    llm_prompt: "descrição da transação",
     isVisibleInList: false,
     isVisibleInAnalysis: false,
     isRequired: false,
@@ -306,9 +310,9 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "merchant",
-    name: "Merchant",
+    name: "Fornecedor",
     type: "string",
-    llm_prompt: "merchant name, use the original spelling and language",
+    llm_prompt: "nome do fornecedor, use a grafia e idioma original",
     isVisibleInList: true,
     isVisibleInAnalysis: true,
     isRequired: false,
@@ -316,9 +320,9 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "issuedAt",
-    name: "Issued At",
+    name: "Emitido em",
     type: "string",
-    llm_prompt: "issued at date (YYYY-MM-DD format)",
+    llm_prompt: "data de emissão (formato YYYY-MM-DD)",
     isVisibleInList: true,
     isVisibleInAnalysis: true,
     isRequired: true,
@@ -326,9 +330,9 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "projectCode",
-    name: "Project",
+    name: "Projeto",
     type: "string",
-    llm_prompt: "project code, one of: {projects.code}",
+    llm_prompt: "código do projeto, um de: {projects.code}",
     isVisibleInList: true,
     isVisibleInAnalysis: true,
     isRequired: false,
@@ -336,9 +340,9 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "categoryCode",
-    name: "Category",
+    name: "Categoria",
     type: "string",
-    llm_prompt: "category code, one of: {categories.code}",
+    llm_prompt: "código da categoria, um de: {categories.code}",
     isVisibleInList: true,
     isVisibleInAnalysis: true,
     isRequired: false,
@@ -346,7 +350,7 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "files",
-    name: "Files",
+    name: "Arquivos",
     type: "string",
     llm_prompt: "",
     isVisibleInList: true,
@@ -358,7 +362,7 @@ export const DEFAULT_FIELDS = [
     code: "total",
     name: "Total",
     type: "number",
-    llm_prompt: "total total of the transaction",
+    llm_prompt: "valor total da transação",
     isVisibleInList: true,
     isVisibleInAnalysis: true,
     isRequired: true,
@@ -366,9 +370,9 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "currencyCode",
-    name: "Currency",
+    name: "Moeda",
     type: "string",
-    llm_prompt: "currency code, ISO 4217 three letter code like USD, EUR, including crypto codes like BTC, ETH, etc",
+    llm_prompt: "código da moeda, padrão ISO 4217 como USD, EUR, incluindo cripto como BTC, ETH, etc",
     isVisibleInList: false,
     isVisibleInAnalysis: true,
     isRequired: false,
@@ -376,7 +380,7 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "convertedTotal",
-    name: "Converted Total",
+    name: "Total Convertido",
     type: "number",
     llm_prompt: "",
     isVisibleInList: false,
@@ -386,7 +390,7 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "convertedCurrencyCode",
-    name: "Converted Currency Code",
+    name: "Moeda Convertida",
     type: "string",
     llm_prompt: "",
     isVisibleInList: false,
@@ -396,7 +400,7 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "type",
-    name: "Type",
+    name: "Tipo",
     type: "string",
     llm_prompt: "",
     isVisibleInList: false,
@@ -406,7 +410,7 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "note",
-    name: "Note",
+    name: "Observação",
     type: "string",
     llm_prompt: "",
     isVisibleInList: false,
@@ -416,9 +420,9 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "vat_rate",
-    name: "VAT Rate",
+    name: "Taxa de IVA",
     type: "number",
-    llm_prompt: "VAT rate in percentage 0-100",
+    llm_prompt: "taxa de IVA em porcentagem 0-100",
     isVisibleInList: false,
     isVisibleInAnalysis: false,
     isRequired: false,
@@ -426,9 +430,9 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "vat",
-    name: "VAT Amount",
+    name: "Valor do IVA",
     type: "number",
-    llm_prompt: "total VAT in currency of the invoice",
+    llm_prompt: "total de IVA na moeda da fatura",
     isVisibleInList: false,
     isVisibleInAnalysis: false,
     isRequired: false,
@@ -436,9 +440,9 @@ export const DEFAULT_FIELDS = [
   },
   {
     code: "text",
-    name: "Extracted Text",
+    name: "Texto Extraído",
     type: "string",
-    llm_prompt: "extract all recognised text from the invoice",
+    llm_prompt: "extrair todo o texto reconhecido da fatura",
     isVisibleInList: false,
     isVisibleInAnalysis: false,
     isRequired: false,

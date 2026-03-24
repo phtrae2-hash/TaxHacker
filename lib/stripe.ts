@@ -24,9 +24,9 @@ export type Plan = {
 export const PLANS: Record<string, Plan> = {
   unlimited: {
     code: "unlimited",
-    name: "Unlimited",
-    description: "Special unlimited plan",
-    benefits: ["Unlimited storage", "Unlimited AI analysis", "Unlimited everything"],
+    name: "Ilimitado",
+    description: "Plano especial ilimitado",
+    benefits: ["Armazenamento ilimitado", "Análise de IA ilimitada", "Tudo ilimitado"],
     price: "",
     stripePriceId: "",
     limits: {
@@ -37,16 +37,16 @@ export const PLANS: Record<string, Plan> = {
   },
   early: {
     code: "early",
-    name: "Early Adopter",
-    description: "Discounted plan for our first users who can forgive us bugs and childish problems :)",
+    name: "Plano Inicial",
+    description: "Plano com desconto para nossos primeiros usuários",
     benefits: [
-      "Special price for early adopters",
-      "512 Mb of storage",
-      "1000 AI file analyses",
-      "Unlimited transactions",
-      "Unlimited fields, categories and projects",
+      "Preço especial para planos iniciais",
+      "512 Mb de armazenamento",
+      "1000 análises de arquivos com IA",
+      "Transações ilimitadas",
+      "Campos, categorias e projetos ilimitados",
     ],
-    price: "€35 for a year",
+    price: "entrar em contato",
     stripePriceId: "price_1RHTj1As8DS4NhOzhejpTN3I",
     limits: {
       storage: 512 * 1024 * 1024,

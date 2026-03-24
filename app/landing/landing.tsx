@@ -19,7 +19,7 @@ export default function LandingPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-indigo-600 rounded-full opacity-20 blur-md group-hover:opacity-40 transition-opacity duration-300" />
             </div>
-            <ColoredText className="text-2xl font-bold">TaxHacker</ColoredText>
+            <ColoredText className="text-2xl font-bold">AutomateContábil</ColoredText>
           </Link>
           <Link
             href="/enter"
@@ -68,7 +68,7 @@ export default function LandingPage() {
             <div className="absolute inset-0 bg-gradient-to-b from-pink-500/5 via-purple-500/5 to-indigo-500/10 z-10" />
             <video className="w-full h-auto" autoPlay loop muted playsInline poster="/landing/ai-scanner-big.webp">
               <source src="/landing/video.mp4" type="video/mp4" />
-              <Image src="/landing/ai-scanner-big.webp" alt="TaxHacker" width={1728} height={1080} priority />
+              <Image src="/landing/ai-scanner-big.webp" alt="AutomateContábil" width={1728} height={1080} priority />
             </video>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function LandingPage() {
                 Simplifique seus impostos
               </span>
               <span className="text-4xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-                A TaxHacker economiza seu tempo, dinheiro e suas preocupações
+                A AutomateContábil economiza seu tempo, dinheiro e suas preocupações
               </span>
             </h2>
           </div>
@@ -249,7 +249,7 @@ export default function LandingPage() {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-violet-600 mr-3 text-lg">🔧</span>
-                  Amplie e aprimore sua instância do TaxHacker com prompts personalizados de LLM
+                  Amplie e aprimore sua instância do AutomateContábil com prompts personalizados de LLM
                 </li>
                 <li className="flex items-center">
                   <span className="text-violet-600 mr-3 text-lg">🔧</span>
@@ -286,7 +286,7 @@ export default function LandingPage() {
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-center">
                   <span className="text-orange-600 mr-3 text-lg">📤</span>
-                  Implantar sua própria instância do TaxHacker para 100% de privacidade
+                  Implantar sua própria instância do AutomateContábil para 100% de privacidade
                 </li>
                 <li className="flex items-center">
                   <span className="text-orange-600 mr-3 text-lg">📤</span>
@@ -319,7 +319,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-indigo-600 bg-clip-text text-transparent">
-              Escolha a sua versão do TaxHacker
+              Escolha a sua versão do Tax BR
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-16">
@@ -350,7 +350,7 @@ export default function LandingPage() {
                 </li>
               </ul>
               <Link
-                href="https://github.com/vas3k/TaxHacker"
+                href="https://github.com/AutomateContábil"
                 target="_blank"
                 className="block w-full text-center px-6 py-4 bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold rounded-full hover:from-violet-700 hover:to-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-110"
               >
@@ -518,13 +518,13 @@ export default function LandingPage() {
             <div className="max-w-2xl mx-auto text-center">
               <h3 className="text-2xl font-semibold mb-4">Fique por dentro</h3>
               <p className="text-gray-600 mb-6">
-                Estamos trabalhando para tornar o TaxHacker útil para todos. Acompanhe nosso repositório no GitHub e seja notificado
+                Estamos trabalhando para tornar o AutomateContábil útil para todos. Acompanhe nosso repositório no GitHub e seja notificado
                 sobre novos recursos e lançamentos.
               </p>
               <div className="flex flex-col gap-4 max-w-md mx-auto">
                 <div className="flex flex-wrap items-center justify-center gap-4">
                   <a
-                    href="https://github.com/vas3k/TaxHacker"
+                    href="https://github.com/AutomateContábil"
                     target="_blank"
                     rel="noreferrer"
                     className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-full hover:opacity-90 transition-all shadow-lg shadow-purple-500/20"
@@ -542,7 +542,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto text-center text-sm text-gray-600">
           Criado com ❤️ em Berlim por{" "}
           <Link
-            href="https://github.com/vas3k"
+            href="https://github.com/AutomateContábil"
             className="underline font-semibold hover:text-pink-600 transition-colors"
           >
             @vas3k
@@ -580,7 +580,7 @@ export default function LandingPage() {
                 Política de Cookies
               </Link>
               <Link
-                href="https://github.com/vas3k/TaxHacker"
+                href="https://github.com/AutomateContábil"
                 target="_blank"
                 className="text-sm text-gray-600 hover:text-pink-600 font-medium transition-colors"
               >

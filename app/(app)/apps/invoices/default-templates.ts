@@ -11,27 +11,27 @@ export interface InvoiceTemplate {
 
 export default function defaultTemplates(user: User, settings: SettingsMap): InvoiceTemplate[] {
   const defaultTemplate: InvoiceFormData = {
-    title: "INVOICE",
+    title: "FATURA",
     businessLogo: user.businessLogo,
     invoiceNumber: "",
     date: format(new Date(), "yyyy-MM-dd"),
     dueDate: format(addDays(new Date(), 30), "yyyy-MM-dd"),
     currency: settings.default_currency || "EUR",
     companyDetails: `${user.businessName}\n${user.businessAddress || ""}`,
-    companyDetailsLabel: "Bill From",
+    companyDetailsLabel: "Emitente",
     billTo: "",
-    billToLabel: "Bill To",
+    billToLabel: "Destinatário",
     items: [{ name: "", subtitle: "", showSubtitle: false, quantity: 1, unitPrice: 0, subtotal: 0 }],
     taxIncluded: true,
-    additionalTaxes: [{ name: "VAT", rate: 0, amount: 0 }],
+    additionalTaxes: [{ name: "IVA", rate: 0, amount: 0 }],
     additionalFees: [],
     notes: "",
     bankDetails: user.businessBankDetails || "",
-    issueDateLabel: "Issue Date",
-    dueDateLabel: "Due Date",
+    issueDateLabel: "Data de emissão",
+    dueDateLabel: "Data de vencimento",
     itemLabel: "Item",
-    quantityLabel: "Quantity",
-    unitPriceLabel: "Unit Price",
+    quantityLabel: "Quantidade",
+    unitPriceLabel: "Preço unitário",
     subtotalLabel: "Subtotal",
     summarySubtotalLabel: "Subtotal:",
     summaryTotalLabel: "Total:",
@@ -65,7 +65,7 @@ export default function defaultTemplates(user: User, settings: SettingsMap): Inv
   }
 
   return [
-    { name: "Default", formData: defaultTemplate },
+    { name: "Padrão", formData: defaultTemplate },
     { name: "DE", formData: germanTemplate },
   ]
 }

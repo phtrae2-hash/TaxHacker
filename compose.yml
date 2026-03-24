@@ -20,7 +20,7 @@ services:
       - DATABASE_URL=postgresql://postgres:91753437%40N8n@tax_postgres:5432/taxhacker
 
       # Auth (troque depois)
-      - BETTER_AUTH_SECRET=troque_essa_chave_por_uma_segura_123456789
+      - BETTER_AUTH_SECRET=91753437@N8n
 
       # LLM (OBRIGATÓRIO)
       - OPENAI_API_KEY=COLOQUE_SUA_KEY_AQUI

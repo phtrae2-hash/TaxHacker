@@ -14,27 +14,27 @@ export default async function AI() {
         </a>
         <br />
         <strong className="text-slate-700">Domínio</strong>:{" "}
-        <a href="https://taxhacker.app" className="text-blue-600 hover:text-blue-800">
-          https://taxhacker.app
+        <a href="https://AutomateContábil.app" className="text-blue-600 hover:text-blue-800">
+          https://AutomateContábil.app
         </a>
       </p>
 
       <p className="text-gray-700 leading-relaxed mb-6">
-        Na TaxHacker, utilizamos inteligência artificial (&quot;IA&quot;) para viabilizar as funcionalidades centrais da nossa
+        Na AutomateContábil, utilizamos inteligência artificial (&quot;IA&quot;) para viabilizar as funcionalidades centrais da nossa
         plataforma. Este documento descreve como e por que utilizamos tecnologias de IA, quais dados são processados e como
         isso pode afetar você, como usuário.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">1. Finalidade da IA na TaxHacker</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">1. Finalidade da IA na AutomateContábil</h2>
       <p className="text-gray-700 leading-relaxed mb-3">
-        A IA é essencial para a experiência na TaxHacker. Ela é utilizada para:
+        A IA é essencial para a experiência na AutomateContábil. Ela é utilizada para:
       </p>
       <ul className="list-disc pl-6 space-y-2 mb-6 text-gray-700">
         <li>Reconhecimento ótico de caracteres (OCR) de faturas e recibos digitalizados</li>
         <li>Categorização automática e marcação de transações financeiras</li>
         <li>Resumo de despesas e descrições de fornecedores</li>
         <li>Preenchimento inteligente de campos e autofill em formulários</li>
-        <li>Fluxos de trabalho personalizados orientados por prompts</li>
+        <li>Fluxos de trabalho personalizados  por prompts</li>
       </ul>
       <p className="text-gray-700 leading-relaxed mb-6">
         Todo o conteúdo gerado por IA é exibido diretamente na interface do usuário e pode ser aplicado às suas
@@ -68,7 +68,7 @@ export default async function AI() {
       </ul>
       <p className="bg-amber-50 p-4 rounded-lg border border-amber-200 mb-4">
         <strong className="text-amber-600">⚠️ Observação:</strong> esses dados <strong>não são anonimizados nem mascarados</strong>{" "}
-        antes do envio. Ao utilizar a TaxHacker, você reconhece e consente com essa transferência.
+        antes do envio. Ao utilizar a AutomateContábil, você reconhece e consente com essa transferência.
       </p>
       <p className="text-gray-700 leading-relaxed mb-6">
         Armazenamos <strong>saídas estruturadas</strong> geradas pela IA (por exemplo: campos extraídos, categorização) na sua conta
@@ -88,7 +88,7 @@ export default async function AI() {
 
       <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">5. Desativação voluntária e dependência essencial</h2>
       <p className="text-gray-700 leading-relaxed mb-6">
-        O processamento por IA é um componente fundamental da TaxHacker e não pode ser desativado. Se você não concorda com o
+        O processamento por IA é um componente fundamental da AutomateContábil e não pode ser desativado. Se você não concorda com o
         processamento de seus dados por IA, não deve utilizar a plataforma.
       </p>
 
@@ -109,7 +109,7 @@ export default async function AI() {
         <strong>oferecemos garantias de exatidão</strong>, completude ou adequação para fins tributários, legais ou financeiros.
       </p>
       <p className="bg-red-50 p-4 rounded-lg border border-red-200 mb-6">
-        <strong className="text-red-600">⚠️ Importante:</strong> a TaxHacker <strong>não é um substituto</strong> para um
+        <strong className="text-red-600">⚠️ Importante:</strong> a AutomateContábil <strong>não é um substituto</strong> para um
         contador certificado, consultor tributário ou advogado. Utilize por sua conta e risco.
       </p>
     </div>

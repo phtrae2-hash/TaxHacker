@@ -48,7 +48,7 @@ export default async function CloudPaymentSuccessPage({
           <ColoredText>Pagamento confirmado</ColoredText>
         </CardTitle>
         <CardDescription className="text-center text-xl">
-          Bem-vindo ao TaxHacker, {user.name}. Agora é possível acessar sua conta
+          Bem-vindo ao AutomateContábil, {user.name}. Agora é possível acessar sua conta
         </CardDescription>
         <CardContent className="w-full">
           <LoginForm defaultEmail={user.email} />

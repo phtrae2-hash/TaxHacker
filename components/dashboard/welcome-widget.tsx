@@ -18,7 +18,7 @@ export async function WelcomeWidget() {
       <div className="flex flex-col">
         <CardTitle className="flex items-center justify-between">
           <span className="text-2xl font-bold">
-            <ColoredText>Olá, eu sou o TaxHacker 👋</ColoredText>
+            <ColoredText>Olá, sou seu assistente tributário 👋</ColoredText>
           </span>
           <Button
             variant="outline"
@@ -35,7 +35,7 @@ export async function WelcomeWidget() {
         <CardDescription className="mt-5">
           <p className="mb-3">
             Sou um aplicativo de contabilidade que ajuda o(a) usuário(a) a lidar com recibos, cheques e faturas sem fim
-            com (como você já imaginou) IA. Veja o que eu posso fazer:
+            com IA. Veja o que eu posso fazer:
           </p>
           <ul className="mb-5 list-disc pl-5 space-y-1">
             <li>
@@ -62,7 +62,7 @@ export async function WelcomeWidget() {
               na exportação CSV para seu(a) consultor(a) tributário(a).
             </li>
             <li>
-              Eu ainda sou <strong>bem novo</strong> e posso cometer erros. Use por sua conta e risco!
+              Caso tenha algum <strong>report</strong> a fazer encaminhe para nossa equipe.
             </li>
           </ul>
           <p className="mb-3">
@@ -71,23 +71,7 @@ export async function WelcomeWidget() {
             ao declarar seus impostos!
           </p>
         </CardDescription>
-        <div className="mt-2">
-          <Link href="https://github.com/vas3k/TaxHacker" className="text-blue-500 hover:underline">
-            Código-fonte
-          </Link>
-          <span className="mx-2">|</span>
-          <Link href="https://github.com/vas3k/TaxHacker/issues" className="text-blue-500 hover:underline">
-            Solicitar novo recurso
-          </Link>
-          <span className="mx-2">|</span>
-          <Link href="https://github.com/vas3k/TaxHacker/issues" className="text-blue-500 hover:underline">
-            Relatar um erro
-          </Link>
-          <span className="mx-2">|</span>
-          <Link href="mailto:me@vas3k.ru" className="text-blue-500 hover:underline">
-            Contatar o autor
-          </Link>
-        </div>
+        
         <div className="flex flex-wrap gap-2 mt-8">
           {settings.openai_api_key === "" && (
             <Link href="/settings/llm">

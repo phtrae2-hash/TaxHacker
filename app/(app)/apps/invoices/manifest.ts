@@ -1,7 +1,7 @@
 import { AppManifest } from "../common"
 
 export const manifest: AppManifest = {
-  name: "Invoice Generator",
-  description: "Generate custom invoices and send them to your customers",
+  name: "Gerador de faturas",
+  description: "Gere faturas personalizadas e envie-as aos seus clientes.",
   icon: "🧾",
 }

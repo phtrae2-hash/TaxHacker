@@ -148,11 +148,12 @@ export default function TransactionEditForm({
           defaultValue={formData.issuedAt}
           isRequired={fieldMap.issuedAt.isRequired}
         />
+
         {formData.currencyCode !== settings.default_currency || formData.convertedTotal !== 0 ? (
           <>
             {formData.convertedTotal !== null && (
               <FormInput
-                title={`Total convertido para ${formData.convertedCurrencyCode || "MOEDA DESCONHECIDA"}`}
+                title={`Valor convertido (${formData.convertedCurrencyCode || "MOEDA DESCONHECIDA"})`}
                 type="number"
                 step="0.01"
                 name="convertedTotal"
@@ -161,6 +162,7 @@ export default function TransactionEditForm({
                 className="max-w-36"
               />
             )}
+
             {(!formData.convertedCurrencyCode || formData.convertedCurrencyCode !== settings.default_currency) && (
               <FormSelectCurrency
                 title="Converter para"
@@ -226,7 +228,7 @@ export default function TransactionEditForm({
         <Button type="button" onClick={handleDelete} variant="destructive" disabled={isDeleting}>
           <>
             <Trash2 className="h-4 w-4" />
-            {isDeleting ? "⏳ Excluindo..." : "Excluir "}
+            {isDeleting ? "⏳ Excluindo..." : "Excluir"}
           </>
         </Button>
 
