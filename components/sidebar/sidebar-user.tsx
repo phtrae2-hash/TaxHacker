@@ -18,6 +18,8 @@ import Link from "next/link"
 import { redirect } from "next/navigation"
 
 export default function SidebarUser({ profile, isSelfHosted }: { profile: UserProfile; isSelfHosted: boolean }) {
+  const planName = PLANS[profile.membershipPlan as keyof typeof PLANS]?.name || "Plano"
+
   const signOut = async () => {
     await authClient.signOut({})
     redirect("/")
@@ -65,7 +67,7 @@ export default function SidebarUser({ profile, isSelfHosted }: { profile: UserPr
           <DropdownMenuItem asChild>
             <Link href="/settings/profile" className="flex items-center gap-2">
               <Sparkles />
-              <span className="truncate">{PLANS[profile.membershipPlan as keyof typeof PLANS].name}</span>
+              <span className="truncate">{planName}</span>
               <span className="ml-auto text-xs text-muted-foreground">{formatBytes(profile.storageUsed)} usados</span>
             </Link>
           </DropdownMenuItem>
